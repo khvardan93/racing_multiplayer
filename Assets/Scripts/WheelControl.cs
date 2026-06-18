@@ -6,15 +6,11 @@ public class WheelControl : MonoBehaviour {
   public bool Steerable;
   public bool Motorized;
 
-  [HideInInspector] public WheelCollider WheelCollider;
+   public WheelCollider WheelCollider;
 
   Vector3 _position;
   Quaternion _rotation;
 
-  // Start is called before the first frame update
-  private void Start() {
-    WheelCollider = GetComponent<WheelCollider>();
-  }
 
   // Update is called once per frame
   void Update() {
