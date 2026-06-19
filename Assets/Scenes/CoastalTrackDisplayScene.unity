@@ -223,6 +223,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6068846d6722353469b01d606c8a145e, type: 3}
   m_PrefabInstance: {fileID: 148724437}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &180109974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180109976}
+  - component: {fileID: 180109975}
+  m_Layer: 0
+  m_Name: NetworkSceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &180109975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180109974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031993022fa54ba6a0bc7c630c484836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSceneTakeOverEnabled: 1
+  LogSceneLoadErrors: 1
+  DestroySpawnedPrefabsOnSceneUnload: 1
+--- !u!4 &180109976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180109974}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56, y: 9, z: -277}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193882070
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +389,9 @@ GameObject:
   - component: {fileID: 307313872}
   - component: {fileID: 307313873}
   - component: {fileID: 307313874}
+  - component: {fileID: 307313875}
+  - component: {fileID: 307313876}
+  - component: {fileID: 307313877}
   m_Layer: 0
   m_Name: Prototype Runner
   m_TagString: Untagged
@@ -501,6 +551,46 @@ MonoBehaviour:
   _statsEnabled: 100
   _canvasAnchor: 1
   _statsCustomConfig: []
+--- !u!114 &307313875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307313868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031993022fa54ba6a0bc7c630c484836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSceneTakeOverEnabled: 1
+  LogSceneLoadErrors: 1
+  DestroySpawnedPrefabsOnSceneUnload: 1
+--- !u!114 &307313876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307313868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10533623ed629624c8acc6869f609bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DelayIfSceneManagerIsBusy: 1
+--- !u!114 &307313877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307313868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &368549021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,3 +1157,4 @@ SceneRoots:
   - {fileID: 849641138}
   - {fileID: 286698239}
   - {fileID: 307313871}
+  - {fileID: 180109976}

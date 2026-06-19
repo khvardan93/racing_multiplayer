@@ -11,6 +11,11 @@ public class CarSpawner : SimulationBehaviour, IPlayerJoined
 
     public void PlayerJoined(PlayerRef player)
     {
+        Debug.LogError(
+            $"PlayerJoined {player} " +
+            $"IsServer={Runner.IsServer}"
+        );
+        
         if (!Runner.IsServer)
             return;
         

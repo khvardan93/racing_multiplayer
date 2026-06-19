@@ -26,6 +26,8 @@ public class CarControl : NetworkBehaviour
 
     public override void Spawned()
     {
+        Debug.LogError($"Spawned");
+        gameObject.SetActive(true);
         // EVERYONE needs to know where this car spawned so 
         // predictions match during a reset execution.
         _initialSpawnPosition = transform.position;
