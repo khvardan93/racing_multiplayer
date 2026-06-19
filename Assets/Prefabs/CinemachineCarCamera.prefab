@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8365912926377230281}
   - component: {fileID: 6584716487623744764}
-  - component: {fileID: 8685196854453066656}
   - component: {fileID: 3677533906373223352}
+  - component: {fileID: 8685196854453066656}
   m_Layer: 0
   m_Name: CinemachineCarCamera
   m_TagString: Untagged
@@ -77,21 +77,6 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &8685196854453066656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481761600084721164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4700f9f03ad19f94baf0367cb7a9c988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Width: 2
-  Damping: 1
-  FovRange: {x: 51.545456, y: 70.481285}
 --- !u!114 &3677533906373223352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +103,18 @@ MonoBehaviour:
     CameraRadius: 0.2
     DampingIntoCollision: 0
     DampingFromCollision: 0.5
+--- !u!114 &8685196854453066656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481761600084721164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4700f9f03ad19f94baf0367cb7a9c988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 2
+  Damping: 1
+  FovRange: {x: 51.545456, y: 70.481285}
