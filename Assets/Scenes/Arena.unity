@@ -223,53 +223,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6068846d6722353469b01d606c8a145e, type: 3}
   m_PrefabInstance: {fileID: 148724437}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &180109974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 180109976}
-  - component: {fileID: 180109975}
-  m_Layer: 0
-  m_Name: NetworkSceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &180109975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180109974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031993022fa54ba6a0bc7c630c484836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSceneTakeOverEnabled: 1
-  LogSceneLoadErrors: 1
-  DestroySpawnedPrefabsOnSceneUnload: 1
---- !u!4 &180109976
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180109974}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56, y: 9, z: -277}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193882070
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +232,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193882071}
+  - component: {fileID: 193882072}
+  - component: {fileID: 193882073}
   m_Layer: 0
   m_Name: coastalTrack
   m_TagString: Untagged
@@ -304,293 +259,40 @@ Transform:
   - {fileID: 368549022}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &286698236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 286698239}
-  - component: {fileID: 286698238}
-  - component: {fileID: 286698237}
-  m_Layer: 0
-  m_Name: Prototype Network Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &286698237
+--- !u!114 &193882072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286698236}
+  m_GameObject: {fileID: 193882070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba5764f4714bd64ab9efab127938e77, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ff531ba6310f8e41a510631b7f9c98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnableHotkeys: 0
-  BaseSkin: {fileID: 11400000, guid: e59b35dfeb4b6f54e9b2791b2a40a510, type: 2}
---- !u!114 &286698238
+  _maxRetries: 3
+  _initialRetryDelay: 1
+  _backoffMultiplier: 1.5
+  _runnerPrefab: {fileID: 700225448258695047, guid: 153fc55874444414fba310ce06143481, type: 3}
+  _configs: {fileID: 11400000, guid: b101bcd2edc62dc4fb4a4896fcc48a14, type: 2}
+  _sceneManager: {fileID: 0}
+--- !u!114 &193882073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286698236}
+  m_GameObject: {fileID: 193882070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88230848386761045af440d808ee3efa, type: 3}
+  m_Script: {fileID: 11500000, guid: ecc2ca8c492b4607af0d80d8446dd8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunnerPrefab: {fileID: 307313870}
-  StartMode: 0
-  AutoStartAs: 6
-  AutoHideGUI: 1
-  AutoClients: 1
-  ClientStartDelay: 0.5
-  ServerPort: 5505
-  DefaultRoomName: test
-  InitialScenePath: Assets/Scenes/CoastalTrackDisplayScene.unity
-  _currentStage: 0
-  AutoConnectVirtualInstances: 1
-  VirtualInstanceConnectDelay: 1
---- !u!4 &286698239
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286698236}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &307313868
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 307313871}
-  - component: {fileID: 307313870}
-  - component: {fileID: 307313869}
-  - component: {fileID: 307313872}
-  - component: {fileID: 307313873}
-  - component: {fileID: 307313874}
-  - component: {fileID: 307313875}
-  - component: {fileID: 307313876}
-  - component: {fileID: 307313877}
-  m_Layer: 0
-  m_Name: Prototype Runner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &307313869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -232609262, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInput:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 307313873}
-        m_TargetAssemblyTypeName: InputsManager, Assembly-CSharp
-        m_MethodName: OnInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnInputMissing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnConnectedToServer:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDisconnectedFromServer:
-    m_PersistentCalls:
-      m_Calls: []
-  OnConnectRequest:
-    m_PersistentCalls:
-      m_Calls: []
-  OnConnectFailed:
-    m_PersistentCalls:
-      m_Calls: []
-  PlayerJoined:
-    m_PersistentCalls:
-      m_Calls: []
-  PlayerLeft:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSimulationMessage:
-    m_PersistentCalls:
-      m_Calls: []
-  OnShutdown:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSessionListUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCustomAuthenticationResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHostMigration:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSceneLoadDone:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSceneLoadStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnReliableData:
-    m_PersistentCalls:
-      m_Calls: []
-  OnReliableProgress:
-    m_PersistentCalls:
-      m_Calls: []
-  OnObjectEnterAOI:
-    m_PersistentCalls:
-      m_Calls: []
-  OnObjectExitAOI:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &307313870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1199893898, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &307313871
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &307313872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f64552c066018e44483e5e5b7419a8d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 7224389902234348179, guid: 5aab09ac37960e34da3e0e91d4d1b3f1, type: 3}
+  _camera: {fileID: 2118617440}
   _spawnPoints:
   - {fileID: 1443992125}
   - {fileID: 368549022}
-  _camera: {fileID: 2118617440}
---- !u!114 &307313873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12c64ed6cba34d80ae3ee179362c334d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &307313874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c6080750a33c9d428004642d0e07dd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _statsEnabled: 100
-  _canvasAnchor: 1
-  _statsCustomConfig: []
---- !u!114 &307313875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031993022fa54ba6a0bc7c630c484836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSceneTakeOverEnabled: 1
-  LogSceneLoadErrors: 1
-  DestroySpawnedPrefabsOnSceneUnload: 1
---- !u!114 &307313876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10533623ed629624c8acc6869f609bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DelayIfSceneManagerIsBusy: 1
---- !u!114 &307313877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307313868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &368549021
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 368549021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 56, y: 9, z: -270}
+  m_LocalPosition: {x: 56, y: 9, z: -267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -700,7 +402,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -720,7 +422,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 35.983395
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -856,6 +558,14 @@ PrefabInstance:
     - target: {fileID: 3481761600084721164, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
       propertyPath: m_Name
       value: CinemachineCarCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677533906373223352, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
+      propertyPath: ShoulderOffset.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584716487623744764, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 35.983395
       objectReference: {fileID: 0}
     - target: {fileID: 8365912926377230281, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
       propertyPath: m_LocalPosition.x
@@ -996,9 +706,9 @@ MonoBehaviour:
     ScreenPosition: {x: 0, y: 0}
     DeadZone:
       Enabled: 1
-      Size: {x: 0.3, y: 0}
+      Size: {x: 0.03, y: 0}
     HardLimits:
-      Enabled: 1
+      Enabled: 0
       Size: {x: 1, y: 1}
       Offset: {x: 1, y: 1}
   CenterOnActivate: 1
@@ -1155,6 +865,3 @@ SceneRoots:
   - {fileID: 193882071}
   - {fileID: 536683847}
   - {fileID: 849641138}
-  - {fileID: 286698239}
-  - {fileID: 307313871}
-  - {fileID: 180109976}

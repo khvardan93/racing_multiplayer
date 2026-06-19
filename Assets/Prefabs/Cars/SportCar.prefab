@@ -247,10 +247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b52e68dca750348a2fc9fcedb2fcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WheelModel: {fileID: 1415955321550510628}
-  Steerable: 1
-  Motorized: 0
-  WheelCollider: {fileID: 2339757296627529648}
+  _wheelModel: {fileID: 1415955321550510628}
+  _steerable: 1
+  _motorized: 0
+  _wheelCollider: {fileID: 2339757296627529648}
 --- !u!1 &1651885017653588533
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,10 +682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b52e68dca750348a2fc9fcedb2fcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WheelModel: {fileID: 2555899216757473207}
-  Steerable: 0
-  Motorized: 1
-  WheelCollider: {fileID: 734723855902050846}
+  _wheelModel: {fileID: 2555899216757473207}
+  _steerable: 0
+  _motorized: 1
+  _wheelCollider: {fileID: 734723855902050846}
 --- !u!1 &5314091453874220095
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,15 +903,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3e6859656c0f44d9e3a76a5c52d2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MotorTorque: 900
-  BrakeTorque: 900
-  MaxSpeed: 40
-  SteeringRange: 20
-  SteeringRangeAtMaxSpeed: 5
-  CentreOfGravityOffset: -0.5
-  HandBreakDrag: 0.75
-  BreakingDrag: 0.5
-  CoastingDrag: 0.5
+  _motorTorque: 900
+  _brakeTorque: 900
+  _maxSpeed: 40
+  _steeringRange: 20
+  _steeringRangeAtMaxSpeed: 5
+  _centreOfGravityOffset: -0.5
+  _handBreakDrag: 0.75
+  _breakingDrag: 0.5
+  _coastingDrag: 0.5
   _wheels:
   - {fileID: 4972420068498927321}
   - {fileID: 5501889770960193292}
@@ -1163,10 +1163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b52e68dca750348a2fc9fcedb2fcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WheelModel: {fileID: 6162098376951503016}
-  Steerable: 1
-  Motorized: 0
-  WheelCollider: {fileID: 4503849007564147291}
+  _wheelModel: {fileID: 6162098376951503016}
+  _steerable: 1
+  _motorized: 0
+  _wheelCollider: {fileID: 4503849007564147291}
 --- !u!1 &8892535706615307954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,10 +1251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b52e68dca750348a2fc9fcedb2fcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WheelModel: {fileID: 1490403222275459424}
-  Steerable: 0
-  Motorized: 1
-  WheelCollider: {fileID: 2029752188872747742}
+  _wheelModel: {fileID: 1490403222275459424}
+  _steerable: 0
+  _motorized: 1
+  _wheelCollider: {fileID: 2029752188872747742}
 --- !u!1 &9088646069182902276
 GameObject:
   m_ObjectHideFlags: 0

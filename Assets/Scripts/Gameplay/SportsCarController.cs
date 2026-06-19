@@ -66,7 +66,7 @@ public class SportsCarController : MonoBehaviour
     private void HandleSteering()
     {
         // Handle steering on the front wheels only
-        float currentSteerAngle = _steerInput * _maxSteerAngle;
+        var currentSteerAngle = _steerInput * _maxSteerAngle;
         _frontLeft.Collider.steerAngle = currentSteerAngle;
         _frontRight.Collider.steerAngle = currentSteerAngle;
     }

@@ -3,21 +3,28 @@ using UnityEngine;
 
 public class CarControl : NetworkBehaviour
 {
-    public float MotorTorque = 2000;
-    public float BrakeTorque = 2000;
-    public float MaxSpeed = 20;
-    public float SteeringRange = 30;
-    public float SteeringRangeAtMaxSpeed = 10;
-    public float CentreOfGravityOffset = -1f;
-    public float HandBreakDrag = 2.5f;
-    public float BreakingDrag = 2.5f;
-    public float CoastingDrag = 1f;
+    [Header("Motor Settings")]
+    [SerializeField] private float _motorTorque = 2000;
+    [SerializeField] private float _brakeTorque = 2000;
 
+    [Header("Speed & Steering")]
+    [SerializeField] private float _maxSpeed = 20;
+    [SerializeField] private float _steeringRange = 30;
+    [SerializeField] private float _steeringRangeAtMaxSpeed = 10;
+
+    [Header("Physics")]
+    [SerializeField] private float _centreOfGravityOffset = -1f;
+    [SerializeField] private float _handBreakDrag = 2.5f;
+    [SerializeField] private float _breakingDrag = 2.5f;
+    [SerializeField] private float _coastingDrag = 1f;
+
+    [Header("Wheels")]
+    [SerializeField] private WheelControl[] _wheels;
+    
     FloatCompressed VerticalInput { get; set; }
     FloatCompressed HorizontalInput { get; set; }
     NetworkBool HandBreakInput { get; set; }
-
-    [SerializeField] private WheelControl[] _wheels;
+    
     private Rigidbody _rigidBody;
     private float _defaultDrag;
     private Vector3 _initialSpawnPosition;
@@ -26,15 +33,18 @@ public class CarControl : NetworkBehaviour
 
     public override void Spawned()
     {
-        Debug.LogError($"Spawned");
-        gameObject.SetActive(true);
+        if (Object.HasInputAuthority)
+        {
+            SceneManager.Instance.SetCameraTarget(transform);
+        }
+        
         // EVERYONE needs to know where this car spawned so 
         // predictions match during a reset execution.
         _initialSpawnPosition = transform.position;
         _initialSpawnRotation = transform.rotation;
         
         _rigidBody = GetComponent<Rigidbody>();
-        _rigidBody.centerOfMass += Vector3.up * CentreOfGravityOffset;
+        _rigidBody.centerOfMass += Vector3.up * _centreOfGravityOffset;
         _defaultDrag = _rigidBody.linearDamping;
         
         _spawned = true;
@@ -48,13 +58,13 @@ public class CarControl : NetworkBehaviour
         FetchNetworkInputs();
 
         // 2. Physics & driving calculations run smoothly on both sides now
-        float forwardSpeed = Vector3.Dot(transform.forward, _rigidBody.linearVelocity);
-        float speedFactor = Mathf.InverseLerp(0, MaxSpeed, forwardSpeed);
-        float currentMotorTorque = Mathf.Lerp(MotorTorque, 0, speedFactor);
-        float currentSteerRange = Mathf.Lerp(SteeringRange, SteeringRangeAtMaxSpeed, speedFactor);
+        var forwardSpeed = Vector3.Dot(transform.forward, _rigidBody.linearVelocity);
+        var speedFactor = Mathf.InverseLerp(0, _maxSpeed, forwardSpeed);
+        var currentMotorTorque = Mathf.Lerp(_motorTorque, 0, speedFactor);
+        var currentSteerRange = Mathf.Lerp(_steeringRange, _steeringRangeAtMaxSpeed, speedFactor);
 
-        bool isAccelerating = Mathf.Sign(VerticalInput) == Mathf.Sign(forwardSpeed);
-        bool isGrounded = false;
+        var isAccelerating = Mathf.Sign(VerticalInput) == Mathf.Sign(forwardSpeed);
+        var isGrounded = false;
 
         Wheels(ref isGrounded, isAccelerating, currentSteerRange, currentMotorTorque);
         Drag(isGrounded, isAccelerating);
@@ -85,7 +95,7 @@ public class CarControl : NetworkBehaviour
             }
             else
             {
-                wheel.WheelCollider.brakeTorque = Mathf.Abs(VerticalInput) * BrakeTorque;
+                wheel.WheelCollider.brakeTorque = Mathf.Abs(VerticalInput) * _brakeTorque;
                 wheel.WheelCollider.motorTorque = 0;
             }
         }
@@ -95,11 +105,11 @@ public class CarControl : NetworkBehaviour
     {
         if (HandBreakInput && isGrounded)
         {
-            _rigidBody.linearDamping = HandBreakDrag;
+            _rigidBody.linearDamping = _handBreakDrag;
         }
         else if (VerticalInput == 0f && isGrounded)
         {
-            _rigidBody.linearDamping = CoastingDrag;
+            _rigidBody.linearDamping = _coastingDrag;
         }
         else if (isAccelerating)
         {
@@ -107,7 +117,7 @@ public class CarControl : NetworkBehaviour
         }
         else if (isGrounded)
         {
-            _rigidBody.linearDamping = BreakingDrag;
+            _rigidBody.linearDamping = _breakingDrag;
         }
         else
         {

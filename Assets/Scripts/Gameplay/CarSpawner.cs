@@ -6,36 +6,26 @@ using UnityEngine;
 public class CarSpawner : SimulationBehaviour, IPlayerJoined
 {
     [SerializeField] private GameObject _playerPrefab;
-    [SerializeField] private Transform[] _spawnPoints;
-    [SerializeField] private CinemachineCamera _camera;
+    
 
     public void PlayerJoined(PlayerRef player)
     {
-        Debug.LogError(
-            $"PlayerJoined {player} " +
-            $"IsServer={Runner.IsServer}"
-        );
-        
         if (!Runner.IsServer)
             return;
         
         var playerCount = Runner.ActivePlayers.Count();
+        var spawnPoints = SceneManager.Instance.SpawnPoints;
 
-        if (playerCount - 1 >= _spawnPoints.Length)
+        if (playerCount - 1 >= spawnPoints.Count)
         {
             Debug.LogError("Not enough spawn points");
             return;
         }
 
-        var spawnPoint = _spawnPoints[playerCount - 1];
+        var spawnPoint = spawnPoints[playerCount - 1];
         var car = Runner.Spawn(_playerPrefab, spawnPoint.position, spawnPoint.rotation, player);
 
         car.gameObject.SetActive(true);
-
-        if (player == Runner.LocalPlayer)
-        {
-            _camera.Follow = car.transform;
-        }
 
         Runner.SetPlayerObject(player, car);
     }

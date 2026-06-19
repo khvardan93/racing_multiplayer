@@ -1,7 +1,4 @@
-﻿using Fusion;
-using Fusion.Sockets;
-using System;
-using System.Collections.Generic;
+using Fusion;
 using UnityEngine;
 
 public class InputsManager : MonoBehaviour
@@ -23,7 +20,7 @@ public class InputsManager : MonoBehaviour
 
         // 1. Gather your vertical inputs
         var accelButton = Input.GetAxis("Accelerate");
-        float vertical = accelButton <= 0 ? Input.GetAxis("Vertical") : accelButton;
+        var vertical = accelButton <= 0 ? Input.GetAxis("Vertical") : accelButton;
 
         var brakeTrigger = Input.GetAxis("BrakeTriggerXBox");
         var accelTrigger = Input.GetAxis("AccelTriggerXBox");
