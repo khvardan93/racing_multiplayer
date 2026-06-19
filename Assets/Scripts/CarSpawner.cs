@@ -11,7 +11,9 @@ public class CarSpawner : SimulationBehaviour, IPlayerJoined
 
     public void PlayerJoined(PlayerRef player)
     {
-
+        if (!Runner.IsServer)
+            return;
+        
         var playerCount = Runner.ActivePlayers.Count();
 
         if (playerCount - 1 >= _spawnPoints.Length)
