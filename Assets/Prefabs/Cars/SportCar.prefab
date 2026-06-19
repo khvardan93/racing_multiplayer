@@ -905,7 +905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MotorTorque: 900
   BrakeTorque: 900
-  MaxSpeed: 20
+  MaxSpeed: 40
   SteeringRange: 20
   SteeringRangeAtMaxSpeed: 5
   CentreOfGravityOffset: -0.5
