@@ -205,7 +205,7 @@ WheelCollider:
   m_GameObject: {fileID: 1450461077828055722}
   serializedVersion: 2
   m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.4
+  m_Radius: 0.35
   m_SuspensionSpring:
     spring: 35000
     damper: 1500
@@ -640,7 +640,7 @@ WheelCollider:
   m_GameObject: {fileID: 4141274474040479403}
   serializedVersion: 2
   m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.4
+  m_Radius: 0.35
   m_SuspensionSpring:
     spring: 35000
     damper: 1500
@@ -906,8 +906,8 @@ MonoBehaviour:
   MotorTorque: 900
   BrakeTorque: 900
   MaxSpeed: 20
-  SteeringRange: 60
-  SteeringRangeAtMaxSpeed: 20
+  SteeringRange: 20
+  SteeringRangeAtMaxSpeed: 5
   CentreOfGravityOffset: -0.5
   HandBreakDrag: 0.75
   BreakingDrag: 0.5
@@ -1121,7 +1121,7 @@ WheelCollider:
   m_GameObject: {fileID: 8470679519625524841}
   serializedVersion: 2
   m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.4
+  m_Radius: 0.35
   m_SuspensionSpring:
     spring: 35000
     damper: 1500
@@ -1209,7 +1209,7 @@ WheelCollider:
   m_GameObject: {fileID: 8892535706615307954}
   serializedVersion: 2
   m_Center: {x: 0, y: 0.15, z: 0}
-  m_Radius: 0.4
+  m_Radius: 0.35
   m_SuspensionSpring:
     spring: 35000
     damper: 1500

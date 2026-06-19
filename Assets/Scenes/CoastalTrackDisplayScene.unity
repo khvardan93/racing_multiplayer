@@ -193,11 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: .707106709
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: .707106829
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunnerPrefab: {fileID: 307313870}
-  StartMode: 2
+  StartMode: 0
   AutoStartAs: 6
   AutoHideGUI: 1
   AutoClients: 1
