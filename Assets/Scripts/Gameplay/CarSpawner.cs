@@ -10,6 +10,12 @@ public class CarSpawner : SimulationBehaviour, IPlayerJoined
 
     public void PlayerJoined(PlayerRef player)
     {
+        Debug.LogError(
+            $"{name} NetId={Object.Id} " +
+            $"InputAuth={Object.HasInputAuthority} " +
+            $"StateAuth={Object.HasStateAuthority}"
+        );
+        
         if (!Runner.IsServer)
             return;
         
