@@ -129,7 +129,7 @@ public class CarControl : NetworkBehaviour
     {
         // GetInput extracts the struct for the current client predicting 
         // OR extracts historical ticks if the server is verifying/rolling back.
-        if (GetInput(out NetworkCarInputData inputs))
+        if (Object.HasInputAuthority && GetInput(out NetworkCarInputData inputs))
         {
             VerticalInput = inputs.Vertical;
             HorizontalInput = inputs.Horizontal;
