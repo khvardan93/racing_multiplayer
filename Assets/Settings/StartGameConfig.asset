@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337a646f4306447780754d1bc1a4c17f, type: 3}
   m_Name: StartGameConfig
   m_EditorClassIdentifier: 
-  _gameMode: 2
+  _gameMode: 6
   _defaultSessionName: MyRoom
   _customLobbyName: 
   _playerCount: 2
