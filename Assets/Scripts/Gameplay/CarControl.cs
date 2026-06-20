@@ -33,6 +33,12 @@ public class CarControl : NetworkBehaviour
 
     public override void Spawned()
     {
+        Debug.LogError(
+            $"{name} NetId={Object.Id} " +
+            $"InputAuth={Object.HasInputAuthority} " +
+            $"StateAuth={Object.HasStateAuthority}"
+        );
+        
         if (Object.HasInputAuthority)
         {
             SceneManager.Instance.SetCameraTarget(transform);
