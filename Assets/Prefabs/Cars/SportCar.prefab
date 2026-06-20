@@ -836,11 +836,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 772366419987293030}
   - {fileID: 2214728267092871383}
   - {fileID: 7641905007171361398}
   - {fileID: 8720351057652384874}
   - {fileID: 2934944140876140758}
+  - {fileID: 772366419987293030}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1098802952698926192
@@ -952,7 +952,7 @@ MonoBehaviour:
   _stateAuthorityChangeErrorCorrectionDelta: 0
   SyncScale: 0
   SyncParent: 1
-  _interpolationTarget: {fileID: 772366419987293030}
+  _interpolationTarget: {fileID: 0}
   UsePreciseRotation: 0
   UseRenderSleepThresholds: 1
   RenderThresholds:
