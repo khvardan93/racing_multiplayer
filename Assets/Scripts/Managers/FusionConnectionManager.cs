@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Fusion;
 using UnityEngine;
+using Zenject;
 
 /// <summary>
 /// Wraps NetworkRunner.StartGame with automatic retry logic.
@@ -34,8 +35,10 @@ public class FusionConnectionManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private NetworkRunner _runnerPrefab;
-    [SerializeField] private StartGameConfig  _configs;
-    [SerializeField] private NetworkSceneManager  _sceneManager;
+
+    [Inject] private StartGameConfig _configs;
+    [Inject] private NetworkSceneManager _sceneManager;
+    [Inject] private DiContainer _container;
 
     public int MaxRetries => _maxRetries;
     public float InitialRetryDelay => _initialRetryDelay;
@@ -77,6 +80,7 @@ public class FusionConnectionManager : MonoBehaviour
             // that failed to start can leave it in a bad internal state.
             var runner = Instantiate(_runnerPrefab);
             runner.name = $"NetworkRunner (attempt {attempt})";
+            _container.InjectGameObject(runner.gameObject);
 
             var result = await runner.StartGame(args);
 

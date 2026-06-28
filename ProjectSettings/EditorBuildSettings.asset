@@ -25,5 +25,7 @@ EditorBuildSettings:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 9fce3d80d774d0d4db46d8dc3f243dd3, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 9068056b13c7aa84286c4867809c5c8c, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f93e3585c2029fa409a811da9661f2f2, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 3d477b7d8f0f3d14393ed74c8b449ac0, type: 2}
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

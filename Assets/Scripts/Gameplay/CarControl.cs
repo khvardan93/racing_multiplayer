@@ -1,8 +1,11 @@
 using Fusion;
 using UnityEngine;
+using Zenject;
 
 public class CarControl : NetworkBehaviour
 {
+    [Inject] private ISceneService _sceneService;
+
     [Header("Motor Settings")]
     [SerializeField] private float _motorTorque = 2000;
     [SerializeField] private float _brakeTorque = 2000;
@@ -33,10 +36,10 @@ public class CarControl : NetworkBehaviour
 
     public override void Spawned()
     {
-        if (Object.HasInputAuthority)
+        /*if (Object.HasInputAuthority)
         {
-            SceneManager.Instance.SetCameraTarget(transform);
-        }
+            _sceneService.SetCameraTarget(transform);
+        }*/
         
         // EVERYONE needs to know where this car spawned so 
         // predictions match during a reset execution.
