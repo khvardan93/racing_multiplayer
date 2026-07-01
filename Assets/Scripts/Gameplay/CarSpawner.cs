@@ -3,19 +3,29 @@ using Fusion;
 using UnityEngine;
 using Zenject;
 
-public class CarSpawner : SimulationBehaviour, IPlayerJoined
+public class CarSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _playerPrefab;
 
     [Inject] private ISceneService _sceneService;
     [Inject] private DiContainer _container;
 
-    public void PlayerJoined(PlayerRef player)
+    private void OnEnable()
     {
-        if (!Runner.IsServer)
+        FusionEvents.OnPlayerJoined += PlayerJoined;
+    }
+
+    private void OnDisable()
+    {
+        FusionEvents.OnPlayerJoined -= PlayerJoined;
+    }
+
+    public void PlayerJoined(PlayerRef player, NetworkRunner runner)
+    {
+        if (!runner.IsServer)
             return;
 
-        var playerCount = Runner.ActivePlayers.Count();
+        var playerCount = runner.ActivePlayers.Count();
         var spawnPoints = _sceneService.SpawnPoints;
 
         if (playerCount - 1 >= spawnPoints.Count)
@@ -25,13 +35,13 @@ public class CarSpawner : SimulationBehaviour, IPlayerJoined
         }
 
         var spawnPoint = spawnPoints[playerCount - 1];
-        var car = Runner.Spawn(_playerPrefab, spawnPoint.position, spawnPoint.rotation, player);
+        var car = runner.Spawn(_playerPrefab, spawnPoint.position, spawnPoint.rotation, player);
 
         // Fusion spawns outside Zenject's instantiation path, so inject manually.
         _container.InjectGameObject(car.gameObject);
         _sceneService.SetCameraTarget(car.transform);
 
         car.gameObject.SetActive(true);
-        Runner.SetPlayerObject(player, car);
+        runner.SetPlayerObject(player, car);
     }
 }

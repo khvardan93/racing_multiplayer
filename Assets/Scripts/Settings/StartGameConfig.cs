@@ -39,6 +39,16 @@ public class StartGameConfig : ScriptableObject
     [Header("Scene")]
     [Tooltip("Name of the scene to load/sync for this session. Must be added to Build Settings.")]
     [SerializeField] private string _sceneName;
+    
+    [Header("Photon Settings")]
+    [Tooltip("How many times to retry before giving up and reporting failure.")]
+    [SerializeField] private int _maxRetries = 3;
+
+    [Tooltip("Delay before the first retry attempt, in seconds.")]
+    [SerializeField] private float _initialRetryDelay = 1f;
+
+    [Tooltip("Multiplier applied to the delay after each failed attempt (backoff).")]
+    [SerializeField] private float _backoffMultiplier = 1.5f;
 
     public GameMode GameMode => _gameMode;
     public string DefaultSessionName => _defaultSessionName;
@@ -47,6 +57,10 @@ public class StartGameConfig : ScriptableObject
     public bool IsVisible => _isVisible;
     public bool IsOpen => _isOpen;
     public string SceneName => _sceneName;
+    
+    public int MaxRetries => _maxRetries;
+    public float InitialRetryDelay => _initialRetryDelay;
+    public float BackoffMultiplier => _backoffMultiplier;
 
     /// <summary>
     /// Builds a real StartGameArgs from this config at runtime.

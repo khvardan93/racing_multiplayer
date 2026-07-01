@@ -3,16 +3,9 @@ using System.Threading.Tasks;
 using Fusion;
 using UnityEngine;
 using Zenject;
+using Object = UnityEngine.Object;
 
-/// <summary>
-/// Wraps NetworkRunner.StartGame with automatic retry logic.
-/// Useful because the first connection attempt to Photon's Name Server can
-/// time out due to NAT mapping setup (common UDP behavior), even though a
-/// retry almost always succeeds instantly.
-///
-/// Use this instead of (or alongside) FusionBootstrap's default connect call.
-/// </summary>
-public class FusionConnectionManager : MonoBehaviour
+public class FusionConnectionManager
 {
     public enum ConnectionState
     {
@@ -23,26 +16,12 @@ public class FusionConnectionManager : MonoBehaviour
         Failed
     }
 
-    [Header("Retry Settings")]
-    [Tooltip("How many times to retry before giving up and reporting failure.")]
-    [SerializeField] private int _maxRetries = 3;
-
-    [Tooltip("Delay before the first retry attempt, in seconds.")]
-    [SerializeField] private float _initialRetryDelay = 1f;
-
-    [Tooltip("Multiplier applied to the delay after each failed attempt (backoff).")]
-    [SerializeField] private float _backoffMultiplier = 1.5f;
-
-    [Header("References")]
-    [SerializeField] private NetworkRunner _runnerPrefab;
+    [Inject] private NetworkRunner _runnerPrefab;
 
     [Inject] private StartGameConfig _configs;
     [Inject] private NetworkSceneManager _sceneManager;
     [Inject] private DiContainer _container;
 
-    public int MaxRetries => _maxRetries;
-    public float InitialRetryDelay => _initialRetryDelay;
-    public float BackoffMultiplier => _backoffMultiplier;
     public NetworkRunner RunnerPrefab => _runnerPrefab;
 
     public ConnectionState State { get; private set; } = ConnectionState.Idle;
@@ -55,22 +34,21 @@ public class FusionConnectionManager : MonoBehaviour
 
     private NetworkRunner _activeRunner;
 
-    private void Start()
+    public void Connect()
     {
-        
-        ConnectWithRetry(_configs.BuildArgs(_sceneManager));
+        ConnectWithRetry();
     }
 
-    /// <summary>
-    /// Starts the game/session with retry logic. Mirrors the relevant fields
-    /// from NetworkRunner.StartGame's StartGameArgs.
-    /// </summary>
-    public async void ConnectWithRetry(StartGameArgs args)
+    private async void ConnectWithRetry()
     {
+        var args = _configs.BuildArgs(_sceneManager);
+        
         var attempt = 0;
-        var delay = _initialRetryDelay;
+        var delay = _configs.InitialRetryDelay;
+        var maxRetries = _configs.MaxRetries;
+        var backoffMultiplier = _configs.BackoffMultiplier;
 
-        while (attempt <= _maxRetries)
+        while (attempt <= maxRetries)
         {
             attempt++;
 
@@ -78,9 +56,9 @@ public class FusionConnectionManager : MonoBehaviour
 
             // Always spin up a fresh runner for each attempt - reusing a runner
             // that failed to start can leave it in a bad internal state.
-            var runner = Instantiate(_runnerPrefab);
+            var runner = _runnerPrefab;
             runner.name = $"NetworkRunner (attempt {attempt})";
-            _container.InjectGameObject(runner.gameObject);
+           // _container.InjectGameObject(runner.gameObject);
 
             var result = await runner.StartGame(args);
 
@@ -98,16 +76,16 @@ public class FusionConnectionManager : MonoBehaviour
             // Clean up the failed runner before retrying.
             if (runner != null)
             {
-                Destroy(runner.gameObject);
+                Object.Destroy(runner.gameObject);
             }
 
-            if (attempt > _maxRetries)
+            if (attempt > maxRetries)
             {
                 break;
             }
 
             await Task.Delay(TimeSpan.FromSeconds(delay));
-            delay *= _backoffMultiplier;
+            delay *= backoffMultiplier;
         }
 
         SetState(ConnectionState.Failed, attempt);
@@ -127,8 +105,9 @@ public class FusionConnectionManager : MonoBehaviour
 
     private void SetState(ConnectionState newState, int attempt)
     {
+        var maxRetries = _configs.MaxRetries;
         State = newState;
-        OnStateChanged?.Invoke(newState, attempt, _maxRetries);
-        Debug.Log($"[FusionConnectionManager] State: {newState} (attempt {attempt}/{_maxRetries})");
+        OnStateChanged?.Invoke(newState, attempt, maxRetries);
+        Debug.Log($"[FusionConnectionManager] State: {newState} (attempt {attempt}/{maxRetries})");
     }
 }
