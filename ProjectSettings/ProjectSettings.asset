@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 960
-  defaultScreenHeightWeb: 600
+  defaultScreenWidthWeb: 1920
+  defaultScreenHeightWeb: 1080
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
@@ -146,8 +146,6 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 0.0.2
   preloadedAssets:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -528,7 +526,10 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: WebGL
+    m_StaticBatching: 0
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -548,7 +549,8 @@ PlayerSettings:
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-  m_TemplateCustomTags: {}
+  m_TemplateCustomTags:
+    PRODUCT_DESCRIPTION: 
   mobileMTRendering:
     Android: 1
     iPhone: 1
@@ -815,7 +817,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: APPLICATION:Default
+  webGLTemplate: APPLICATION:Minimal
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 0
@@ -850,7 +852,7 @@ PlayerSettings:
     Server: FUSION_LOGLEVEL_DEBUG
     Standalone: FUSION_WEAVER;FUSION2;FUSION_2;FUSION_2_0;FUSION_2_0_12;FUSION_2_OR_NEWER;FUSION_2_0_OR_NEWER;FUSION_LOGLEVEL_DEBUG;SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY
     VisionOS: FUSION_LOGLEVEL_DEBUG
-    WebGL: FUSION_LOGLEVEL_DEBUG;FUSION_WEAVER;FUSION2;FUSION_2;FUSION_2_0;FUSION_2_0_12;FUSION_2_OR_NEWER;FUSION_2_0_OR_NEWER
+    WebGL: FUSION_LOGLEVEL_DEBUG;FUSION_WEAVER;FUSION2;FUSION_2;FUSION_2_0;FUSION_2_0_12;FUSION_2_OR_NEWER;FUSION_2_0_OR_NEWER;SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY
     Windows Store Apps: FUSION_LOGLEVEL_DEBUG
     XboxOne: FUSION_LOGLEVEL_DEBUG
     iPhone: FUSION_LOGLEVEL_DEBUG
