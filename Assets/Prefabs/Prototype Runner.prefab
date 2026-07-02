@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 7489901815037544825}
   - component: {fileID: 700225448258695047}
   - component: {fileID: 4497001033686257192}
+  - component: {fileID: 1978836757358227637}
   - component: {fileID: 2032485264260957556}
   - component: {fileID: 7011387693446275185}
   - component: {fileID: 2905882644755690117}
   - component: {fileID: 430844043095402553}
   - component: {fileID: 7532325468090176276}
   - component: {fileID: 2475985139278272911}
-  - component: {fileID: 7053914454158312954}
   m_Layer: 0
   m_Name: Prototype Runner
   m_TagString: Untagged
@@ -133,6 +133,19 @@ MonoBehaviour:
   OnObjectExitAOI:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1978836757358227637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6797366966931326048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64552c066018e44483e5e5b7419a8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPrefab: {fileID: 7224389902234348179, guid: 5aab09ac37960e34da3e0e91d4d1b3f1, type: 3}
 --- !u!114 &2032485264260957556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +188,6 @@ MonoBehaviour:
   IsSceneTakeOverEnabled: 1
   LogSceneLoadErrors: 1
   DestroySpawnedPrefabsOnSceneUnload: 1
-  AddressableScenesLabel: FusionScenes
 --- !u!114 &430844043095402553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,15 +230,3 @@ MonoBehaviour:
   ClientPhysicsSimulation: 3
   DeltaTimeMultiplier: 1
   SetUnityFixedTimestep: 0
---- !u!114 &7053914454158312954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6797366966931326048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb33e75ca1a88c4194f343351b885d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FusionEvents
