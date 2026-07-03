@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 18255676}
   - component: {fileID: 18255675}
   - component: {fileID: 18255674}
+  - component: {fileID: 18255677}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -240,6 +241,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18255672}
   m_CullTransparentMesh: 1
+--- !u!114 &18255677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18255672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
+  _duration: 0.3
+  _delay: 0.9
+  _growAnchor: 3
+  _ease: 27
+  _playOnEnable: 1
+  _fade: 0
+  _image: {fileID: 18255675}
+  _rectTransform: {fileID: 18255673}
 --- !u!1 &78362752
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +273,7 @@ GameObject:
   - component: {fileID: 78362756}
   - component: {fileID: 78362755}
   - component: {fileID: 78362754}
+  - component: {fileID: 78362757}
   m_Layer: 5
   m_Name: GarageButton
   m_TagString: Untagged
@@ -272,6 +294,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1280642623}
+  - {fileID: 1769497545}
   m_Father: {fileID: 1316569328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -318,7 +341,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 78362755}
   m_OnClick:
     m_PersistentCalls:
@@ -361,6 +384,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78362752}
   m_CullTransparentMesh: 1
+--- !u!114 &78362757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78362752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
+  _duration: 0.3
+  _delay: 0.3
+  _growAnchor: 3
+  _ease: 27
+  _playOnEnable: 1
+  _fade: 0
+  _image: {fileID: 78362755}
+  _rectTransform: {fileID: 78362753}
 --- !u!1 &152833085
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +507,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -803,7 +846,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -940,7 +983,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -1065,6 +1108,7 @@ GameObject:
   - component: {fileID: 910785077}
   - component: {fileID: 910785076}
   - component: {fileID: 910785075}
+  - component: {fileID: 910785078}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1174,6 +1218,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910785073}
   m_CullTransparentMesh: 1
+--- !u!114 &910785078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910785073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
+  _duration: 0.3
+  _delay: 0
+  _growAnchor: 3
+  _ease: 27
+  _playOnEnable: 1
+  _fade: 0
+  _image: {fileID: 910785076}
+  _rectTransform: {fileID: 910785074}
 --- !u!1 &1046252021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1249,7 @@ GameObject:
   - component: {fileID: 1046252022}
   - component: {fileID: 1046252024}
   - component: {fileID: 1046252023}
+  - component: {fileID: 1046252025}
   m_Layer: 5
   m_Name: Line
   m_TagString: Untagged
@@ -1249,6 +1314,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046252021}
   m_CullTransparentMesh: 1
+--- !u!114 &1046252025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046252021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
+  _duration: 1
+  _delay: 0
+  _growAnchor: 0
+  _ease: 22
+  _playOnEnable: 1
+  _fade: 1
+  _image: {fileID: 1046252023}
+  _rectTransform: {fileID: 1046252022}
 --- !u!1 &1153347545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1529,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 1
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
@@ -1597,6 +1682,7 @@ GameObject:
   - component: {fileID: 1355831221}
   - component: {fileID: 1355831223}
   - component: {fileID: 1355831222}
+  - component: {fileID: 1355831224}
   m_Layer: 5
   m_Name: DescriptionLabel
   m_TagString: Untagged
@@ -1723,6 +1809,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355831220}
   m_CullTransparentMesh: 1
+--- !u!114 &1355831224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355831220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31973faf2a69b7040ba6affc76083ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UITextPrintAnimator
+  _duration: 1
+  _delay: 0
+  _playOnEnable: 1
+  _loop: 0
+  _loopCharCount: 0
+  _loopStepDelay: 0
+  _text: {fileID: 1355831222}
+--- !u!1 &1769497544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769497545}
+  - component: {fileID: 1769497547}
+  - component: {fileID: 1769497546}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1769497545
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769497544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 78362753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 160, y: 24}
+  m_SizeDelta: {x: 100, y: 27.46}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1769497546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769497544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 195a41215b97e0b4aa40bb6d8fe1a821, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1769497547
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769497544}
+  m_CullTransparentMesh: 1
 --- !u!1 &1844747348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1915,7 @@ GameObject:
   - component: {fileID: 1844747352}
   - component: {fileID: 1844747351}
   - component: {fileID: 1844747350}
+  - component: {fileID: 1844747353}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1844,6 +2025,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844747348}
   m_CullTransparentMesh: 1
+--- !u!114 &1844747353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844747348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
+  _duration: 0.3
+  _delay: 0.6
+  _growAnchor: 3
+  _ease: 27
+  _playOnEnable: 1
+  _fade: 0
+  _image: {fileID: 1844747351}
+  _rectTransform: {fileID: 1844747349}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -597,10 +597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
-  _duration: 2
+  _duration: 1
   _delay: 0
   _growAnchor: 0
-  _ease: 27
+  _ease: 22
   _playOnEnable: 1
   _fade: 1
   _image: {fileID: 300211839}
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31973faf2a69b7040ba6affc76083ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.UITextPrintAnimator
-  _duration: 2
+  _duration: 1
   _delay: 0
   _playOnEnable: 1
   _loop: 0
