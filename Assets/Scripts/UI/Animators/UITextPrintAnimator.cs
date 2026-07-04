@@ -33,11 +33,6 @@ namespace UI
         private Coroutine _cursorRoutine;
         private Action _onDone;
 
-        private void Awake()
-        {
-            _fullText = _text.text;
-        }
-
         private void OnEnable()
         {
             if (_playOnEnable)
@@ -68,7 +63,15 @@ namespace UI
         public void Play()
         {
             if(!gameObject.activeInHierarchy)
+            {
                 Debug.LogWarning($"'{name}' gameobject is disabled in hierarchy, but you tried to start a coroutine!");
+                return;
+            }
+
+            if (_fullText is null || _fullText != _text.text)
+            {
+                _fullText = _text.text;
+            }
             
             StopPrinting();
             _printRoutine = StartCoroutine(PrintRoutine());
@@ -91,11 +94,6 @@ namespace UI
 
         private IEnumerator PrintRoutine()
         {
-            if (_fullText is null)
-            {
-                Debug.LogError(_text.text);
-                _fullText = _text.text;
-            }
             _text.text = string.Empty;
 
             var characterCount = _fullText.Length;
