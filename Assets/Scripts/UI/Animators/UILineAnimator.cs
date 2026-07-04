@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class UILineAnimator : MonoBehaviour
+    public class UILineAnimator : UIBaseItem
     {
         private enum GrowAnchor
         {
@@ -53,7 +53,7 @@ namespace UI
         {
             if (_playOnEnable)
             {
-                Play();
+                Show();
             }
         }
 
@@ -62,11 +62,11 @@ namespace UI
             _sequence?.Kill();
         }
 
-        public void Play()
+        public void Show()
         {
             _sequence?.Kill();
 
-            _rectTransform.pivot = GetPivot(_growAnchor);
+            //_rectTransform.pivot = GetPivot(_growAnchor);
 
             if(_fade)
             {
@@ -81,6 +81,11 @@ namespace UI
                 .Append(_image.DOFade(_targetOpacity, _duration))
                 .Join(_rectTransform.DOSizeDelta(_targetSize, _duration).SetEase(_ease))
                 .SetTarget(this);
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

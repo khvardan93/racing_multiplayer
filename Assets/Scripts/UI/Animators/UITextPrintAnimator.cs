@@ -1,13 +1,22 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 
 namespace UI
 {
-    public class UITextPrintAnimator : MonoBehaviour
+    public class UITextPrintAnimator : UIBaseItem
     {
+        private enum PrintType
+        {
+            ByDuration,
+            ByStepLength,
+        }
+        
         [Header("Print animation")]
+        [SerializeField] private PrintType _printType;
         [SerializeField] private float _duration = 1f;
+        [SerializeField] private float _stepLength = 0.1f;
         [SerializeField] private float _delay = 0f;
         [SerializeField] private bool _playOnEnable = true;
 
@@ -22,6 +31,7 @@ namespace UI
         private string _fullText;
         private Coroutine _printRoutine;
         private Coroutine _cursorRoutine;
+        private Action _onDone;
 
         private void Awake()
         {
@@ -38,11 +48,28 @@ namespace UI
 
         private void OnDisable()
         {
+            Reset();
+        }
+
+        public override void Show(Action onDone = null)
+        {
+            base.Show(onDone);
+            _onDone = onDone;
+            Play();
+        }
+
+        public override void Reset()
+        {
+            if(_fullText is not null) _text.text = _fullText;
+            _onDone = null;
             StopPrinting();
         }
 
         public void Play()
         {
+            if(!gameObject.activeInHierarchy)
+                Debug.LogWarning($"'{name}' gameobject is disabled in hierarchy, but you tried to start a coroutine!");
+            
             StopPrinting();
             _printRoutine = StartCoroutine(PrintRoutine());
         }
@@ -64,17 +91,21 @@ namespace UI
 
         private IEnumerator PrintRoutine()
         {
+            if (_fullText is null)
+            {
+                Debug.LogError(_text.text);
+                _fullText = _text.text;
+            }
             _text.text = string.Empty;
 
             var characterCount = _fullText.Length;
 
             if (_delay > 0f)
             {
-                
                 yield return new WaitForSeconds(_delay);
             }
             
-            var stepDuration =  _duration / characterCount;
+            var stepDuration = _printType == PrintType.ByDuration ? _duration / characterCount : _stepLength;
             var waiter = new WaitForSeconds(stepDuration);
 
             for (int i = 0; i < characterCount; i++)
@@ -84,6 +115,8 @@ namespace UI
             }
             
             _text.text = _fullText;
+            _onDone?.Invoke();
+            _onDone = null;
             
             if (_loop)
             {
