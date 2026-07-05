@@ -95,7 +95,7 @@ namespace UI
         {
             foreach (var item in _items)
             {
-                item.Hide();
+                item?.Hide();
             }
         }
 

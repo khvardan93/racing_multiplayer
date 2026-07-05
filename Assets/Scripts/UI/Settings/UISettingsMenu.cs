@@ -11,7 +11,7 @@ namespace UI
         Account
     }
     
-    public class UISettingsManu : MonoBehaviour
+    public class UISettingsMenu : MonoBehaviour
     {
         [Serializable]
         public struct Tab

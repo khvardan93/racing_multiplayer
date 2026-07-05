@@ -1,56 +1,59 @@
 using System;
 using DG.Tweening;
-using UI;
 using UnityEngine;
 
-public class UIItemAppearAnimator : UIBaseItem
+namespace UI
 {
-    [Header("Appear animation")]
-    [SerializeField] private float _duration = 0.3f;
-    [SerializeField] private float _delay;
-    [SerializeField] private Ease _ease = Ease.OutBack;
-    [SerializeField] private bool _playOnEnable = true;
-
-    private Transform _target;
-    private Vector3 _targetScale;
-    private Tween _tween;
-
-    private void Awake()
+    public class UIItemAppearAnimator : UIBaseItem
     {
-        _target = transform;
-        _targetScale = _target.localScale;
-    }
+        [Header("Appear animation")] [SerializeField]
+        private float _duration = 0.3f;
 
-    private void OnEnable()
-    {
-        if (_playOnEnable)
+        [SerializeField] private float _delay;
+        [SerializeField] private Ease _ease = Ease.OutBack;
+        [SerializeField] private bool _playOnEnable = true;
+
+        private Transform _target;
+        private Vector3 _targetScale;
+        private Tween _tween;
+
+        private void Awake()
         {
-            Show();
+            _target = transform;
+            _targetScale = _target.localScale;
         }
-    }
 
-    private void OnDisable()
-    {
-        Reset();
-    }
+        private void OnEnable()
+        {
+            if (_playOnEnable)
+            {
+                Show();
+            }
+        }
 
-    public override void Show(Action onDone = null)
-    {
-        base.Show(onDone);
+        private void OnDisable()
+        {
+            Reset();
+        }
 
-        _tween?.Kill();
-        _target.localScale = Vector3.zero;
+        public override void Show(Action onDone = null)
+        {
+            base.Show(onDone);
 
-        _tween = _target.DOScale(_targetScale, _duration)
-            .SetDelay(_delay)
-            .SetEase(_ease)
-            .OnComplete(() => onDone?.Invoke())
-            .SetTarget(this);
-    }
+            _tween?.Kill();
+            _target.localScale = Vector3.zero;
 
-    public override void Reset()
-    {
-        _tween?.Kill();
-        _target.localScale = Vector3.one;
+            _tween = _target.DOScale(_targetScale, _duration)
+                .SetDelay(_delay)
+                .SetEase(_ease)
+                .OnComplete(() => onDone?.Invoke())
+                .SetTarget(this);
+        }
+
+        public override void Reset()
+        {
+            _tween?.Kill();
+            _target.localScale = Vector3.one;
+        }
     }
 }

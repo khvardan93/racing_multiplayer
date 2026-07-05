@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UI
 {
@@ -8,15 +7,5 @@ namespace UI
         [SerializeField] private SettingsTab _tab;
         
         public SettingsTab Tab => _tab;
-        
-        public override void Select()
-        {
-            base.Select();
-        }
-
-        public override void Unselect()
-        {
-            base.Unselect();
-        }
     }
 }

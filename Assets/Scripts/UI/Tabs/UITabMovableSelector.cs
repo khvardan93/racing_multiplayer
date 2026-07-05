@@ -17,10 +17,10 @@ namespace UI
         [SerializeField] private float _delay;
         [SerializeField] private float _duration = 0.3f;
         [SerializeField] private Ease _ease = Ease.OutQuad;
+        [SerializeField] private Vector2 _originalSize;
 
         private Tween _positionTween;
         private Tween _sizeTween;
-        private Vector2 _originalSize;
 
         private void Awake()
         {
@@ -46,7 +46,6 @@ namespace UI
 
             var sizeDelta = _image.sizeDelta;
             var anchoredPosition = _image.anchoredPosition;
-            _originalSize = sizeDelta;
 
             if (_axis == UITabSelectorAxis.Horizontal)
             {
@@ -68,7 +67,6 @@ namespace UI
         private void Resize()
         {
             _sizeTween?.Kill();
-            
             _sizeTween = _image.DOSizeDelta(_originalSize, _duration)
                 .SetDelay(_delay)
                 .SetEase(_ease);
