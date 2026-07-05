@@ -1,16 +1,37 @@
+using UI;
 using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
-public class UIMainMenu : MonoBehaviour
+namespace ui
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class UIMainMenu : UIBaseItem
     {
-        
-    }
+        [SerializeField] private Button _playButton;
+        [SerializeField] private Button _settingsButton;
 
-    // Update is called once per frame
-    void Update()
-    {
+        [Inject] private GarageManager _garageManager;
         
+        private void Awake()
+        {
+            _playButton.onClick.AddListener(OnPlay);
+            _settingsButton.onClick.AddListener(OnSettings);
+        }
+
+        private void OnDestroy()
+        {
+            _playButton.onClick.RemoveListener(OnPlay);
+            _settingsButton.onClick.RemoveListener(OnSettings);
+        }
+        
+        private void OnPlay()
+        {
+            _garageManager.ShowPage(GaragePages.LoadingScreen);
+        }
+        
+        private void OnSettings()
+        {
+            _garageManager.ShowPage(GaragePages.SettingsMenu);
+        }
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
 namespace UI
 {
@@ -11,7 +13,7 @@ namespace UI
         Account
     }
     
-    public class UISettingsMenu : MonoBehaviour
+    public class UISettingsMenu : UIBaseItem
     {
         [Serializable]
         public struct Tab
@@ -23,9 +25,20 @@ namespace UI
         [SerializeField] private UITabsController _settingsTabs;
         [SerializeField] private Tab[] _tabs;
 
+        [Header("buttons")]
+        [SerializeField] private Button _backButton;
+        [SerializeField] private Button _saveButton;
+        [SerializeField] private Button _revertButton;
+        
+        [Inject] private GarageManager _garageManager;
+        
         private void Awake()
         {
             _settingsTabs.OnChanged += OnTabChanged;
+            
+            _backButton.onClick.AddListener(OnBackButton);
+            _saveButton.onClick.AddListener(OnSaveButton);
+            _revertButton.onClick.AddListener(OnRevertButton);
         }
 
         private void OnEnable()
@@ -36,6 +49,10 @@ namespace UI
         private void OnDestroy()
         {
             _settingsTabs.OnChanged -= OnTabChanged;
+
+            _backButton.onClick.RemoveListener(OnBackButton);
+            _saveButton.onClick.RemoveListener(OnSaveButton);
+            _revertButton.onClick.RemoveListener(OnRevertButton);
         }
 
         private void SetTab(SettingsTab sTab)
@@ -69,6 +86,21 @@ namespace UI
         public void Setup()
         {
             
+        }
+
+        private void OnBackButton()
+        {
+            _garageManager.ShowPage(GaragePages.MainMenu);
+        }
+
+        private void OnSaveButton()
+        {
+            _garageManager.ShowPage(GaragePages.MainMenu);
+        }
+        
+        private void OnRevertButton()
+        {
+            _garageManager.ShowPage(GaragePages.MainMenu);
         }
     }
 }
