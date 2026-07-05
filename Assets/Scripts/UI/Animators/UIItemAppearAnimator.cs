@@ -7,7 +7,7 @@ public class UIItemAppearAnimator : UIBaseItem
 {
     [Header("Appear animation")]
     [SerializeField] private float _duration = 0.3f;
-    [SerializeField] private float _delay = 0f;
+    [SerializeField] private float _delay;
     [SerializeField] private Ease _ease = Ease.OutBack;
     [SerializeField] private bool _playOnEnable = true;
 
