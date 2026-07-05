@@ -17,6 +17,7 @@ namespace UI
 
         public override void Unselect()
         {
+            base.Unselect();
             _text.color = _unselectedColor;
         }
     }

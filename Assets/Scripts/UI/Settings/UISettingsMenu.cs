@@ -28,9 +28,25 @@ namespace UI
             _settingsTabs.OnChanged += OnTabChanged;
         }
 
+        private void OnEnable()
+        {
+            SetTab(SettingsTab.Audio);
+        }
+
         private void OnDestroy()
         {
             _settingsTabs.OnChanged -= OnTabChanged;
+        }
+
+        private void SetTab(SettingsTab sTab)
+        {
+            foreach (var item in _settingsTabs.Items)
+            {
+                if (item is UISettingsTabItem tabItem && tabItem.Tab == sTab)
+                {
+                    _settingsTabs.SetSelectedItem(item);
+                }
+            }
         }
 
         private void OnTabChanged(UITabBaseItem item)

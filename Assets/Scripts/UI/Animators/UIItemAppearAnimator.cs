@@ -12,6 +12,7 @@ namespace UI
         [SerializeField] private float _delay;
         [SerializeField] private Ease _ease = Ease.OutBack;
         [SerializeField] private bool _playOnEnable = true;
+        [SerializeField] private bool _animateHide;
 
         private Transform _target;
         private Vector3 _targetScale;
@@ -46,7 +47,25 @@ namespace UI
             _tween = _target.DOScale(_targetScale, _duration)
                 .SetDelay(_delay)
                 .SetEase(_ease)
-                .OnComplete(() => onDone?.Invoke())
+                .OnComplete(() => { onDone?.Invoke(); })
+                .SetTarget(this);
+        }
+
+        public override void Hide()
+        {
+            if(!_target || !_animateHide)
+            {
+                base.Hide();
+                return;
+            }
+            
+            _tween?.Kill();
+            _target.localScale = Vector3.one;
+
+            _tween = _target.DOScale(Vector3.zero, _duration)
+                .SetDelay(_delay)
+                .SetEase(_ease)
+                .OnComplete(() => { base.Hide(); })
                 .SetTarget(this);
         }
 

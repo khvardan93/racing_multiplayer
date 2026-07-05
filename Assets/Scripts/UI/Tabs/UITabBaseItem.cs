@@ -30,7 +30,10 @@ namespace UI
         {
             Selected = true;
         }
-        
-        public abstract void Unselect();
+
+        public virtual void Unselect()
+        {
+            Selected = false;
+        }
     }
 }
