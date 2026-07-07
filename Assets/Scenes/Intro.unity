@@ -223,6 +223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Intro
       objectReference: {fileID: 0}
+    - target: {fileID: 5468549359371979783, guid: 473f6a86ea84fd540ac2200dc43f8bd6, type: 3}
+      propertyPath: _delay
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6674541045133728866, guid: 473f6a86ea84fd540ac2200dc43f8bd6, type: 3}
       propertyPath: m_Pivot.x
       value: 0

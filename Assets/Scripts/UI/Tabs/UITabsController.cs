@@ -35,6 +35,11 @@ namespace UI
             
             SetSelectedItem(_selectedItem);
         }
+
+        public void UpdateItems()
+        {
+            SetSelectedItem(_selectedItem);
+        }
         
         public void SetSelectedItem(UITabBaseItem sItem)
         {

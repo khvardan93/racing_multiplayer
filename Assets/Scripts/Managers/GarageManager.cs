@@ -30,4 +30,9 @@ public class GarageManager : MonoBehaviour
                 page.Item.Hide();
         }
     }
+
+    public void LoadGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Arena");
+    }
 }

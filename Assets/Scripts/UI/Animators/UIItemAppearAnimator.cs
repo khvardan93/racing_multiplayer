@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace UI
 {
@@ -14,6 +15,8 @@ namespace UI
         [SerializeField] private bool _playOnEnable = true;
         [SerializeField] private bool _animateHide;
 
+        [SerializeField] private UnityEvent _onShowComplete;
+        
         private Transform _target;
         private Vector3 _targetScale;
         private Tween _tween;
@@ -47,7 +50,11 @@ namespace UI
             _tween = _target.DOScale(_targetScale, _duration)
                 .SetDelay(_delay)
                 .SetEase(_ease)
-                .OnComplete(() => { onDone?.Invoke(); })
+                .OnComplete(() =>
+                {
+                    onDone?.Invoke();
+                    _onShowComplete?.Invoke();
+                })
                 .SetTarget(this);
         }
 

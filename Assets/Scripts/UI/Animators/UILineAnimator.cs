@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace UI
@@ -26,6 +27,8 @@ namespace UI
         [Header("Content")]
         [SerializeField] private Image _image;
         [SerializeField] private RectTransform _rectTransform;
+        
+        [SerializeField] private UnityEvent _onShowComplete;
 
         private float _targetOpacity;
         private Sequence _sequence;
@@ -80,6 +83,7 @@ namespace UI
                 .AppendInterval(_delay)
                 .Append(_image.DOFade(_targetOpacity, _duration))
                 .Join(_rectTransform.DOSizeDelta(_targetSize, _duration).SetEase(_ease))
+                .OnComplete(() => { _onShowComplete?.Invoke(); })
                 .SetTarget(this);
         }
 

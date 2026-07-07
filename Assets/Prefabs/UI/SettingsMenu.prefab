@@ -95,6 +95,9 @@ MonoBehaviour:
   _ease: 21
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2038936640322296143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100%
+  m_text: 0%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -452,6 +455,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9040260194785485605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1414,6 +1420,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 7888451832102244202}
   _rectTransform: {fileID: 5087721530482762980}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &512858810050725192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,6 +1566,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 4484644167276935632}
   _rectTransform: {fileID: 2475410331704087320}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &76007615512608334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,6 +1895,9 @@ MonoBehaviour:
   _ease: 21
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2745933063993246201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,6 +2443,9 @@ MonoBehaviour:
   _ease: 21
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6496326667137877893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2980,6 +2998,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2223707042771652141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,6 +3392,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2321344736999134734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,6 +3517,21 @@ MonoBehaviour:
   _fade: 0
   _image: {fileID: 8437013849301228825}
   _rectTransform: {fileID: 2359887769226406351}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3094081944989827000}
+        m_TargetAssemblyTypeName: UI.UITabsController, Assembly-CSharp
+        m_MethodName: UpdateItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &936370676058075896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3903,6 +3942,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 1
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2660597606841875991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,6 +4653,9 @@ MonoBehaviour:
   _ease: 21
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9188864827509793957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4762,6 +4807,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 1
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3222488536630820306
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,6 +5591,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3332164761663514079
 GameObject:
   m_ObjectHideFlags: 0
@@ -5598,6 +5649,21 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5066065055181434876}
+        m_TargetAssemblyTypeName: UI.UITabsController, Assembly-CSharp
+        m_MethodName: UpdateItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3439079900303038132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5790,6 +5856,21 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4238287802370322405}
+        m_TargetAssemblyTypeName: UI.UITabsController, Assembly-CSharp
+        m_MethodName: UpdateItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3526685898072763281
 GameObject:
   m_ObjectHideFlags: 0
@@ -5883,6 +5964,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 1
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3527047580745067359
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,6 +6107,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3696735985015257550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6807,6 +6894,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4149803584938124925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,6 +6990,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 1
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4196968359406075354
 GameObject:
   m_ObjectHideFlags: 0
@@ -7114,6 +7207,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4593491051547334891
 GameObject:
   m_ObjectHideFlags: 0
@@ -7208,6 +7304,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3976903973495658226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7608,6 +7707,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 1437878856542033290}
   _rectTransform: {fileID: 6470316555229030121}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &136437603171171125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7700,6 +7802,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5254112846087647290
 GameObject:
   m_ObjectHideFlags: 0
@@ -8274,6 +8379,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5591154227414560869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9253,6 +9361,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 1
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6271369068900986547
 GameObject:
   m_ObjectHideFlags: 0
@@ -9562,6 +9673,9 @@ MonoBehaviour:
   _ease: 21
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3593894925865843411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9724,6 +9838,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 3515560707145328149}
   _rectTransform: {fileID: 5805220682896062092}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &595625087642885519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9907,6 +10024,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6539347306560205642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10063,6 +10183,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6695211257578054362
 GameObject:
   m_ObjectHideFlags: 0
@@ -10203,6 +10326,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7810712131888194000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10316,6 +10442,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6780815952003965315
 GameObject:
   m_ObjectHideFlags: 0
@@ -10708,6 +10837,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6994268959074315305
 GameObject:
   m_ObjectHideFlags: 0
@@ -10763,6 +10895,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7086535479865756071
 GameObject:
   m_ObjectHideFlags: 0
@@ -10818,6 +10953,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7276076707857796783
 GameObject:
   m_ObjectHideFlags: 0
@@ -10986,6 +11124,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 1
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7318519453750142232
 GameObject:
   m_ObjectHideFlags: 0
@@ -11386,6 +11527,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7498514409635949472
 GameObject:
   m_ObjectHideFlags: 0
@@ -11754,6 +11898,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7647448930733180152
 GameObject:
   m_ObjectHideFlags: 0
@@ -11847,6 +11994,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7755585405579919004
 GameObject:
   m_ObjectHideFlags: 0
@@ -12622,6 +12772,21 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1412165378576797519}
+        m_TargetAssemblyTypeName: UI.UITabsController, Assembly-CSharp
+        m_MethodName: UpdateItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8473674545207254570
 GameObject:
   m_ObjectHideFlags: 0
@@ -12725,6 +12890,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 430329940230594493}
   _rectTransform: {fileID: 6028370345042220021}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5394803870184131160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12785,7 +12953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3711792394613521800
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12904,6 +13072,9 @@ MonoBehaviour:
     Item: {fileID: 1122182856826234775}
   - TabType: 4
     Item: {fileID: 8446837722162161065}
+  _backButton: {fileID: 7864406243582201262}
+  _saveButton: {fileID: 4758465101930854756}
+  _revertButton: {fileID: 3327219387899728794}
 --- !u!1 &8566067371198695987
 GameObject:
   m_ObjectHideFlags: 0
@@ -12959,6 +13130,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8840255841548376016
 GameObject:
   m_ObjectHideFlags: 0
@@ -13449,6 +13623,9 @@ MonoBehaviour:
   _ease: 21
   _playOnEnable: 1
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6298190275845065978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13679,6 +13856,9 @@ MonoBehaviour:
   _ease: 27
   _playOnEnable: 0
   _animateHide: 0
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &7841794569637299193 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7131797777121052226, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
@@ -14102,7 +14282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2976055358871825666, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2976055358871825666, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMin.x
@@ -14118,7 +14298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348168277154767622, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7131797777121052226, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_Pivot.x
@@ -14371,7 +14551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2976055358871825666, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2976055358871825666, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMin.x
@@ -14387,7 +14567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348168277154767622, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7131797777121052226, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_Pivot.x
@@ -14523,7 +14703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2976055358871825666, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2976055358871825666, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMin.x
@@ -14539,7 +14719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348168277154767622, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7131797777121052226, guid: 5f31b98bda8ab6f40a73b56f089fc852, type: 3}
       propertyPath: m_Pivot.x

@@ -27,6 +27,13 @@ namespace ui
         private void OnPlay()
         {
             _garageManager.ShowPage(GaragePages.LoadingScreen);
+            Invoke(nameof(TestLoad), 5f);
+        }
+        
+        //for test, remove later
+        private void TestLoad()
+        {
+            _garageManager.LoadGame();
         }
         
         private void OnSettings()
