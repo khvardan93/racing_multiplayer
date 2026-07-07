@@ -28,10 +28,9 @@ public class CarSpawner : SimulationBehaviour, IPlayerJoined
         var car = Runner.Spawn(_playerPrefab, spawnPoint.position, spawnPoint.rotation, player);
 
         // Fusion spawns outside Zenject's instantiation path, so inject manually.
-        _container.InjectGameObject(car.gameObject);
+        //_container.InjectGameObject(car.gameObject);
         
-        if(player == Runner.LocalPlayer)
-            _sceneService.SetCameraTarget(car.transform);
+       // if(player == Runner.LocalPlayer) _sceneService.SetCameraTarget(car.transform);
 
         car.gameObject.SetActive(true);
         Runner.SetPlayerObject(player, car);

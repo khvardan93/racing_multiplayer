@@ -36,10 +36,17 @@ public class CarControl : NetworkBehaviour
 
     public override void Spawned()
     {
-        /*if (Object.HasInputAuthority)
+        if (Object.HasInputAuthority)
         {
-            _sceneService.SetCameraTarget(transform);
-        }*/
+            if (_sceneService == null)
+            {
+                Debug.LogError(name + " has no scene service.");
+            }
+            else
+            {
+                _sceneService.SetCameraTarget(transform);
+            }
+        }
         
         // EVERYONE needs to know where this car spawned so 
         // predictions match during a reset execution.
