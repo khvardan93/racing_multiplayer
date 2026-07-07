@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class UILosePopup : MonoBehaviour
+    public class UILosePopup : UIBaseItem
     {
         [SerializeField] private Button _rematchButton;
         [SerializeField] private Button _mainMenuButton;

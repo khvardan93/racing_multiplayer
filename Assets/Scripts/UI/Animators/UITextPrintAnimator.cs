@@ -33,6 +33,15 @@ namespace UI
         private Coroutine _cursorRoutine;
         private Action _onDone;
 
+        private void Awake()
+        {
+            if (!_text)
+            {
+                Debug.LogError($"'{name}' gameobject is disabled in hierarchy!");
+                enabled = false;
+            }
+        }
+
         private void OnEnable()
         {
             if (_playOnEnable)

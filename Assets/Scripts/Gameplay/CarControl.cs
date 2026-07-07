@@ -45,6 +45,7 @@ public class CarControl : NetworkBehaviour
             else
             {
                 _sceneService.SetCameraTarget(transform);
+                _sceneService.SetRivalCameraTarget(transform);
             }
         }
         

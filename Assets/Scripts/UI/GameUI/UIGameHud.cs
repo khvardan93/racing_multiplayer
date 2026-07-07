@@ -1,16 +1,31 @@
+using System;
+using Managers;
 using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
-public class UIGameHud : MonoBehaviour
+namespace UI
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class UIGameHud : UIBaseItem
     {
-        
-    }
+        [SerializeField] private Button _pauseButton;
 
-    // Update is called once per frame
-    void Update()
-    {
+        [Inject] GameUIManager _gameUIManager;
         
+        private void Awake()
+        {
+            _pauseButton.onClick.AddListener(OnPause);
+        }
+
+        private void OnDestroy()
+        {
+            _pauseButton.onClick.RemoveListener(OnPause);
+        }
+
+        private void OnPause()
+        {
+            _gameUIManager.ShowPausePopup();
+        }
     }
 }
+

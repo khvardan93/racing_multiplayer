@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class UISettingsPopup : MonoBehaviour
+    public class UISettingsPopup : UIBaseItem
     {
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _revertButton;
