@@ -2,7 +2,7 @@
 
 namespace UI
 {
-    public class LoadingScreen : UIBaseItem
+    public class UILoadingScreen : UIBaseItem
     {
         
     }
