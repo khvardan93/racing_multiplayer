@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1920" height="560" fill="#141B2B"/>
+<rect x="0" y="560" width="1920" height="520" fill="#232A33"/>
+<polygon points="905,560 1015,560 1620,1080 300,1080" fill="#343B45"/>
+<rect x="0" y="0" width="1920" height="1080" fill="#05070B" opacity="0.72"/>
+<rect x="700" y="120" width="14" height="30" rx="4" fill="#FFC94D" transform="rotate(20 707 135)"/>
+<rect x="1210" y="150" width="14" height="30" rx="4" fill="#1FB8C9" transform="rotate(-25 1217 165)"/>
+<rect x="820" y="90" width="12" height="26" rx="4" fill="#F45B69" transform="rotate(-15 826 103)"/>
+<rect x="1100" y="100" width="12" height="26" rx="4" fill="#7F77DD" transform="rotate(30 1106 113)"/>
+<rect x="960" y="70" width="12" height="26" rx="4" fill="#5BD97C" transform="rotate(10 966 83)"/>
+<rect x="620" y="180" width="680" height="720" rx="20" fill="#141A24" stroke="#FFC94D" stroke-width="2"/>
+<circle cx="960" cy="180" r="64" fill="#141A24" stroke="#FFC94D" stroke-width="2"/>
+<text x="960" y="172" font-family="Inter, sans-serif" font-size="24" fill="#FFC94D" text-anchor="middle" letter-spacing="2">1ST</text>
+<text x="960" y="212" font-family="Inter, sans-serif" font-size="28" fill="#FFC94D" text-anchor="middle">&#127942;</text>
+<text x="960" y="332" font-family="Inter, sans-serif" font-size="72" font-weight="500" fill="#FFC94D" text-anchor="middle" letter-spacing="10">VICTORY</text>
+<text x="960" y="382" font-family="Inter, sans-serif" font-size="24" fill="#8E9AA8" text-anchor="middle">You beat Player_2</text>
+<rect x="700" y="424" width="520" height="66" rx="12" fill="#0B0F16"/>
+<text x="728" y="466" font-family="Inter, sans-serif" font-size="22" fill="#8E9AA8">Race time</text>
+<text x="1192" y="466" font-family="JetBrains Mono, monospace" font-size="24" fill="#F2F5F7" text-anchor="end">02:48.902</text>
+<rect x="700" y="502" width="520" height="66" rx="12" fill="#0B0F16"/>
+<text x="728" y="544" font-family="Inter, sans-serif" font-size="22" fill="#8E9AA8">Best lap</text>
+<text x="1192" y="544" font-family="JetBrains Mono, monospace" font-size="24" fill="#1FB8C9" text-anchor="end">00:41.377</text>
+<rect x="700" y="580" width="520" height="66" rx="12" fill="#0B0F16"/>
+<text x="728" y="622" font-family="Inter, sans-serif" font-size="22" fill="#8E9AA8">Gap to rival</text>
+<text x="1192" y="622" font-family="JetBrains Mono, monospace" font-size="24" fill="#5BD97C" text-anchor="end">&#8722;1.84s</text>
+<rect x="700" y="658" width="520" height="66" rx="12" fill="#0B0F16"/>
+<text x="728" y="700" font-family="Inter, sans-serif" font-size="22" fill="#8E9AA8">Reward</text>
+<text x="1192" y="700" font-family="JetBrains Mono, monospace" font-size="24" fill="#FFC94D" text-anchor="end">+250 RP</text>
+<rect x="700" y="760" width="250" height="84" rx="14" fill="#1FB8C9"/>
+<text x="825" y="814" font-family="Inter, sans-serif" font-size="26" font-weight="500" fill="#0E2A33" text-anchor="middle" letter-spacing="2">REMATCH</text>
+<rect x="970" y="760" width="250" height="84" rx="14" fill="none" stroke="#3A4452" stroke-width="2"/>
+<text x="1095" y="814" font-family="Inter, sans-serif" font-size="24" fill="#F2F5F7" text-anchor="middle" letter-spacing="2">MAIN MENU</text>
+</svg>

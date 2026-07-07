@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1920" height="1080" fill="#10151E"/>
+<rect x="0" y="700" width="1920" height="380" fill="#141A24"/>
+<rect x="40" y="40" width="150" height="64" rx="32" fill="#0B0F16"/>
+<text x="115" y="82" font-family="Inter, sans-serif" font-size="24" fill="#F2F5F7" text-anchor="middle">&#8592; Back</text>
+<text x="960" y="88" font-family="Inter, sans-serif" font-size="40" font-weight="500" fill="#F2F5F7" text-anchor="middle" letter-spacing="6">SELECT YOUR CAR</text>
+<rect x="1660" y="40" width="220" height="64" rx="32" fill="#0B0F16"/>
+<text x="1770" y="82" font-family="JetBrains Mono, monospace" font-size="24" fill="#FFC94D" text-anchor="middle">1,840 RP</text>
+<ellipse cx="820" cy="640" rx="360" ry="46" fill="#1B2230"/>
+<ellipse cx="820" cy="634" rx="330" ry="36" fill="#232C3D"/>
+<rect x="600" y="470" width="440" height="110" rx="40" fill="#1FB8C9"/>
+<rect x="700" y="410" width="230" height="90" rx="30" fill="#17909E"/>
+<rect x="726" y="428" width="176" height="52" rx="14" fill="#0E2A33"/>
+<circle cx="700" cy="590" r="52" fill="#11161C"/>
+<circle cx="700" cy="590" r="24" fill="#3A4452"/>
+<circle cx="948" cy="590" r="52" fill="#11161C"/>
+<circle cx="948" cy="590" r="24" fill="#3A4452"/>
+<rect x="1016" y="500" width="30" height="20" rx="6" fill="#FFC94D"/>
+<rect x="596" y="500" width="26" height="20" rx="6" fill="#F45B69"/>
+<circle cx="330" cy="530" r="44" fill="#0B0F16"/>
+<text x="330" y="544" font-family="Inter, sans-serif" font-size="36" fill="#F2F5F7" text-anchor="middle">&#8249;</text>
+<circle cx="1310" cy="530" r="44" fill="#0B0F16"/>
+<text x="1310" y="544" font-family="Inter, sans-serif" font-size="36" fill="#F2F5F7" text-anchor="middle">&#8250;</text>
+<rect x="1430" y="200" width="450" height="560" rx="16" fill="#0B0F16"/>
+<text x="1466" y="272" font-family="Inter, sans-serif" font-size="40" font-weight="500" fill="#F2F5F7">VIPER GT</text>
+<rect x="1466" y="296" width="120" height="38" rx="19" fill="#1FB8C9"/>
+<text x="1526" y="322" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#0E2A33" text-anchor="middle">CLASS A</text>
+<text x="1466" y="404" font-family="Inter, sans-serif" font-size="20" fill="#8E9AA8" letter-spacing="2">SPEED</text>
+<rect x="1466" y="420" width="378" height="12" rx="6" fill="#242C38"/>
+<rect x="1466" y="420" width="302" height="12" rx="6" fill="#1FB8C9"/>
+<text x="1844" y="408" font-family="JetBrains Mono, monospace" font-size="20" fill="#F2F5F7" text-anchor="end">8.0</text>
+<text x="1466" y="490" font-family="Inter, sans-serif" font-size="20" fill="#8E9AA8" letter-spacing="2">ACCELERATION</text>
+<rect x="1466" y="506" width="378" height="12" rx="6" fill="#242C38"/>
+<rect x="1466" y="506" width="264" height="12" rx="6" fill="#1FB8C9"/>
+<text x="1844" y="494" font-family="JetBrains Mono, monospace" font-size="20" fill="#F2F5F7" text-anchor="end">7.0</text>
+<text x="1466" y="576" font-family="Inter, sans-serif" font-size="20" fill="#8E9AA8" letter-spacing="2">HANDLING</text>
+<rect x="1466" y="592" width="378" height="12" rx="6" fill="#242C38"/>
+<rect x="1466" y="592" width="226" height="12" rx="6" fill="#1FB8C9"/>
+<text x="1844" y="580" font-family="JetBrains Mono, monospace" font-size="20" fill="#F2F5F7" text-anchor="end">6.0</text>
+<text x="1466" y="662" font-family="Inter, sans-serif" font-size="20" fill="#8E9AA8" letter-spacing="2">NITRO</text>
+<rect x="1466" y="678" width="378" height="12" rx="6" fill="#242C38"/>
+<rect x="1466" y="678" width="283" height="12" rx="6" fill="#7F77DD"/>
+<text x="1844" y="666" font-family="JetBrains Mono, monospace" font-size="20" fill="#F2F5F7" text-anchor="end">7.5</text>
+<rect x="40" y="820" width="1360" height="180" rx="16" fill="#0B0F16"/>
+<rect x="80" y="852" width="200" height="116" rx="12" fill="#1A2130" stroke="#1FB8C9" stroke-width="3"/>
+<rect x="120" y="890" width="120" height="34" rx="12" fill="#1FB8C9"/>
+<text x="180" y="952" font-family="Inter, sans-serif" font-size="17" fill="#F2F5F7" text-anchor="middle">Viper GT</text>
+<rect x="312" y="852" width="200" height="116" rx="12" fill="#1A2130"/>
+<rect x="352" y="890" width="120" height="34" rx="12" fill="#F08A3C"/>
+<text x="412" y="952" font-family="Inter, sans-serif" font-size="17" fill="#8E9AA8" text-anchor="middle">Falcon S</text>
+<rect x="544" y="852" width="200" height="116" rx="12" fill="#1A2130"/>
+<rect x="584" y="890" width="120" height="34" rx="12" fill="#7F77DD"/>
+<text x="644" y="952" font-family="Inter, sans-serif" font-size="17" fill="#8E9AA8" text-anchor="middle">Phantom</text>
+<rect x="776" y="852" width="200" height="116" rx="12" fill="#1A2130"/>
+<rect x="816" y="890" width="120" height="34" rx="12" fill="#5BD97C"/>
+<text x="876" y="952" font-family="Inter, sans-serif" font-size="17" fill="#8E9AA8" text-anchor="middle">Bolt R</text>
+<rect x="1008" y="852" width="200" height="116" rx="12" fill="#1A2130"/>
+<text x="1108" y="924" font-family="Inter, sans-serif" font-size="26" fill="#8E9AA8" text-anchor="middle">&#128274;</text>
+<text x="1108" y="952" font-family="Inter, sans-serif" font-size="17" fill="#5C6673" text-anchor="middle">2,500 RP</text>
+<rect x="1240" y="852" width="120" height="116" rx="12" fill="#1A2130"/>
+<text x="1300" y="918" font-family="Inter, sans-serif" font-size="30" fill="#8E9AA8" text-anchor="middle">&#8250;</text>
+<rect x="1430" y="820" width="450" height="88" rx="14" fill="#1FB8C9"/>
+<text x="1655" y="876" font-family="Inter, sans-serif" font-size="30" font-weight="500" fill="#0E2A33" text-anchor="middle" letter-spacing="4">SELECT</text>
+</svg>

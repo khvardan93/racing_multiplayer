@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1920" height="560" fill="#141B2B"/>
+<polygon points="0,560 260,430 520,540 760,470 1040,555 1320,450 1620,545 1920,470 1920,560" fill="#1B2438"/>
+<rect x="0" y="560" width="1920" height="520" fill="#232A33"/>
+<polygon points="905,560 1015,560 1620,1080 300,1080" fill="#343B45"/>
+<polygon points="905,560 915,560 480,1080 300,1080" fill="#E2E6EA"/>
+<polygon points="1005,560 1015,560 1620,1080 1440,1080" fill="#E2E6EA"/>
+<polygon points="957,600 963,600 966,660 954,660" fill="#D7DBE0"/>
+<polygon points="950,720 958,720 964,810 944,810" fill="#D7DBE0"/>
+<polygon points="940,900 952,900 962,1030 926,1030" fill="#D7DBE0"/>
+<rect x="855" y="880" width="210" height="150" rx="26" fill="#1FB8C9"/>
+<rect x="875" y="900" width="170" height="60" rx="14" fill="#0E2A33"/>
+<rect x="862" y="1000" width="70" height="26" rx="8" fill="#F45B69"/>
+<rect x="988" y="1000" width="70" height="26" rx="8" fill="#F45B69"/>
+<rect x="890" y="1042" width="140" height="22" rx="6" fill="#11161C"/>
+<rect x="40" y="40" width="250" height="150" rx="14" fill="#0B0F16" opacity="0.72"/>
+<text x="66" y="86" font-family="Inter, sans-serif" font-size="22" fill="#8E9AA8" letter-spacing="3">LAP</text>
+<text x="66" y="136" font-family="JetBrains Mono, monospace" font-size="46" font-weight="500" fill="#F2F5F7">2<tspan fill="#8E9AA8" font-size="30"> / 3</tspan></text>
+<rect x="66" y="152" width="198" height="8" rx="4" fill="#242C38"/>
+<rect x="66" y="152" width="128" height="8" rx="4" fill="#1FB8C9"/>
+<rect x="310" y="40" width="200" height="150" rx="14" fill="#0B0F16" opacity="0.72"/>
+<text x="336" y="86" font-family="Inter, sans-serif" font-size="22" fill="#8E9AA8" letter-spacing="3">POS</text>
+<text x="336" y="146" font-family="JetBrains Mono, monospace" font-size="56" font-weight="500" fill="#FFC94D">1<tspan fill="#8E9AA8" font-size="30"> / 2</tspan></text>
+<rect x="820" y="40" width="280" height="86" rx="14" fill="#0B0F16" opacity="0.72"/>
+<text x="960" y="76" font-family="Inter, sans-serif" font-size="18" fill="#8E9AA8" letter-spacing="3" text-anchor="middle">RACE TIME</text>
+<text x="960" y="112" font-family="JetBrains Mono, monospace" font-size="34" font-weight="500" fill="#F2F5F7" text-anchor="middle">01:24.371</text>
+<rect x="1496" y="36" width="388" height="238" rx="14" fill="#0B0F16" opacity="0.85"/>
+<rect x="1508" y="48" width="364" height="182" rx="10" fill="#1A2130"/>
+<polygon points="1660,48 1720,48 1830,230 1550,230" fill="#2C333E"/>
+<polygon points="1660,48 1664,48 1600,230 1550,230" fill="#B9BFC7"/>
+<polygon points="1716,48 1720,48 1830,230 1780,230" fill="#B9BFC7"/>
+<rect x="1652" y="150" width="76" height="56" rx="12" fill="#F08A3C"/>
+<rect x="1662" y="158" width="56" height="22" rx="6" fill="#3A2410"/>
+<rect x="1508" y="230" width="364" height="44" fill="#0B0F16"/>
+<circle cx="1532" cy="252" r="7" fill="#F45B69"/>
+<text x="1550" y="260" font-family="Inter, sans-serif" font-size="21" fill="#F2F5F7">RIVAL CAM &#183; Player_2</text>
+<text x="1836" y="260" font-family="JetBrains Mono, monospace" font-size="20" fill="#5BD97C" text-anchor="end">32 ms</text>
+<rect x="40" y="790" width="280" height="250" rx="14" fill="#0B0F16" opacity="0.72"/>
+<text x="66" y="828" font-family="Inter, sans-serif" font-size="18" fill="#8E9AA8" letter-spacing="3">TRACK</text>
+<path d="M 100 980 C 80 900 130 850 200 856 C 268 862 300 890 292 930 C 284 972 240 962 210 986 C 180 1010 120 1020 100 980 Z" fill="none" stroke="#3A4452" stroke-width="14" stroke-linejoin="round"/>
+<circle cx="204" cy="857" r="11" fill="#1FB8C9"/>
+<circle cx="286" cy="915" r="11" fill="#F08A3C"/>
+<rect x="760" y="1000" width="400" height="40" rx="10" fill="#0B0F16" opacity="0.72"/>
+<text x="782" y="1027" font-family="Inter, sans-serif" font-size="18" fill="#8E9AA8" letter-spacing="2">NITRO</text>
+<rect x="862" y="1012" width="278" height="16" rx="8" fill="#242C38"/>
+<rect x="862" y="1012" width="180" height="16" rx="8" fill="#7F77DD"/>
+<circle cx="1660" cy="880" r="178" fill="#0B0F16" opacity="0.8"/>
+<path d="M 1561 979 A 140 140 0 1 1 1759 979" fill="none" stroke="#242C38" stroke-width="12" stroke-linecap="round"/>
+<path d="M 1561 979 A 140 140 0 1 1 1795.5 844.7" fill="none" stroke="#1FB8C9" stroke-width="12" stroke-linecap="round"/>
+<line x1="1561" y1="979" x2="1573.7" y2="966.3" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1520" y1="880" x2="1538" y2="880" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1561" y1="781" x2="1573.7" y2="793.7" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1660" y1="740" x2="1660" y2="758" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1759" y1="781" x2="1746.3" y2="793.7" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1800" y1="880" x2="1782" y2="880" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1759" y1="979" x2="1746.3" y2="966.3" stroke="#8E9AA8" stroke-width="4"/>
+<line x1="1660" y1="880" x2="1766.5" y2="852.3" stroke="#F45B69" stroke-width="6" stroke-linecap="round"/>
+<circle cx="1660" cy="880" r="10" fill="#F45B69"/>
+<text x="1660" y="856" font-family="JetBrains Mono, monospace" font-size="64" font-weight="500" fill="#F2F5F7" text-anchor="middle">187</text>
+<text x="1660" y="930" font-family="Inter, sans-serif" font-size="20" fill="#8E9AA8" text-anchor="middle" letter-spacing="2">KM/H</text>
+<text x="1660" y="990" font-family="JetBrains Mono, monospace" font-size="30" font-weight="500" fill="#FFC94D" text-anchor="middle">4</text>
+<text x="1540" y="1014" font-family="Inter, sans-serif" font-size="17" fill="#8E9AA8">0</text>
+<text x="1780" y="1014" font-family="Inter, sans-serif" font-size="17" fill="#8E9AA8" text-anchor="end">240</text>
+<rect x="820" y="150" width="280" height="46" rx="23" fill="#0B0F16" opacity="0.6"/>
+<circle cx="850" cy="173" r="8" fill="#1FB8C9"/>
+<text x="870" y="181" font-family="Inter, sans-serif" font-size="20" fill="#F2F5F7">You</text>
+<text x="1078" y="181" font-family="JetBrains Mono, monospace" font-size="20" fill="#F08A3C" text-anchor="end">+1.84s</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1180 340" width="1180" height="340" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(20,50)">
+<rect x="0" y="0" width="240" height="240" rx="52" fill="#141B2B" stroke="#242C38" stroke-width="3"/>
+<rect x="152" y="38" width="24" height="24" fill="#F2F5F7"/>
+<rect x="176" y="62" width="24" height="24" fill="#F2F5F7"/>
+<rect x="176" y="38" width="24" height="24" fill="#3A4452"/>
+<rect x="152" y="62" width="24" height="24" fill="#3A4452"/>
+<polygon points="30,150 134,66 174,66 70,150" fill="#1FB8C9"/>
+<polygon points="58,198 162,114 202,114 98,198" fill="#F08A3C"/>
+<rect x="26" y="176" width="34" height="10" rx="5" fill="#1FB8C9" opacity="0.45"/>
+<rect x="46" y="210" width="34" height="10" rx="5" fill="#F08A3C" opacity="0.45"/>
+</g>
+<text x="320" y="180" font-family="Inter, sans-serif" font-size="118" font-weight="500" font-style="italic" fill="#F2F5F7" letter-spacing="4">RACER<tspan fill="#1FB8C9">CAR</tspan></text>
+<rect x="326" y="206" width="640" height="6" rx="3" fill="#1FB8C9"/>
+<text x="328" y="266" font-family="Inter, sans-serif" font-size="27" fill="#8E9AA8" letter-spacing="9">2-PLAYER ONLINE RACING</text>
+</svg>

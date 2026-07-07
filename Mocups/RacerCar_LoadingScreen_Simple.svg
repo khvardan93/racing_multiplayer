@@ -1,0 +1,51 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+
+  <!-- ===== BACKGROUND ===== -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#0D1B2A"/>
+    <!-- subtle vignette -->
+    <rect width="1920" height="1080" fill="url(#vignette)"/>
+    <!-- faint speed lines, top-right to bottom-left -->
+    <g id="speed-lines" opacity="0.06" stroke="#00E5FF" stroke-width="3">
+      <line x1="1400" y1="-50" x2="900"  y2="1130"/>
+      <line x1="1520" y1="-50" x2="1020" y2="1130"/>
+      <line x1="1700" y1="-50" x2="1200" y2="1130"/>
+    </g>
+  </g>
+
+  <!-- ===== LOGO ===== -->
+  <g id="logo">
+    <text x="960" y="470" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14" fill="#FFFFFF">RACER<tspan fill="#00E5FF">CAR</tspan></text>
+    <!-- underline swoosh -->
+    <path id="logo-swoosh" d="M600 505 H1250 L1320 522 H670 Z" fill="#FF6B35"/>
+  </g>
+
+  <!-- ===== PROGRESS BAR ===== -->
+  <g id="progress-bar">
+    <!-- track -->
+    <rect id="bar-track" x="560" y="640" width="800" height="14" rx="7" fill="#1B2A41"/>
+    <!-- fill (set width 0-800 in Unity; shown at 65%) -->
+    <rect id="bar-fill" x="560" y="640" width="520" height="14" rx="7" fill="#00E5FF"/>
+    <!-- leading chevron marker -->
+    <path id="bar-chevron" d="M1080 632 L1098 647 L1080 662 L1086 647 Z" fill="#FFD23F"/>
+    <!-- percent label -->
+    <text id="bar-percent" x="1380" y="655" font-size="30" font-weight="700" fill="#00E5FF">65%</text>
+  </g>
+
+  <!-- ===== LOADING LABEL ===== -->
+  <g id="loading-label">
+    <text x="960" y="720" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="8" fill="#8DA3B8">LOADING</text>
+  </g>
+
+  <!-- ===== TIP TEXT ===== -->
+  <g id="tip">
+    <text x="960" y="1000" text-anchor="middle" font-size="22" fill="#5C7089">Tip: Draft behind your opponent to gain a speed boost</text>
+  </g>
+
+  <defs>
+    <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.6" stop-color="#0D1B2A" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+</svg>

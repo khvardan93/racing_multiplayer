@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1920" height="560" fill="#141B2B"/>
+<polygon points="0,560 260,430 520,540 760,470 1040,555 1320,450 1620,545 1920,470 1920,560" fill="#1B2438"/>
+<rect x="0" y="560" width="1920" height="520" fill="#232A33"/>
+<polygon points="905,560 1015,560 1620,1080 300,1080" fill="#343B45"/>
+<polygon points="905,560 915,560 480,1080 300,1080" fill="#E2E6EA"/>
+<polygon points="1005,560 1015,560 1620,1080 1440,1080" fill="#E2E6EA"/>
+<rect x="0" y="0" width="1920" height="1080" fill="#0B0F16" opacity="0.45"/>
+<rect x="1560" y="40" width="320" height="72" rx="36" fill="#0B0F16" opacity="0.72"/>
+<circle cx="1604" cy="76" r="24" fill="#1FB8C9"/>
+<text x="1604" y="84" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#0E2A33" text-anchor="middle">P1</text>
+<text x="1644" y="70" font-family="Inter, sans-serif" font-size="22" fill="#F2F5F7">Player_1</text>
+<text x="1644" y="96" font-family="Inter, sans-serif" font-size="17" fill="#8E9AA8">Level 12 &#183; 1,840 RP</text>
+<text x="960" y="360" font-family="Inter, sans-serif" font-size="132" font-weight="500" fill="#F2F5F7" text-anchor="middle" letter-spacing="10">RACER<tspan fill="#1FB8C9">CAR</tspan></text>
+<rect x="770" y="392" width="380" height="4" rx="2" fill="#1FB8C9"/>
+<text x="960" y="440" font-family="Inter, sans-serif" font-size="26" fill="#8E9AA8" text-anchor="middle" letter-spacing="6">2-PLAYER ONLINE RACING</text>
+<rect x="750" y="520" width="420" height="88" rx="14" fill="#1FB8C9"/>
+<text x="960" y="576" font-family="Inter, sans-serif" font-size="32" font-weight="500" fill="#0E2A33" text-anchor="middle" letter-spacing="4">PLAY</text>
+<rect x="750" y="628" width="420" height="76" rx="14" fill="none" stroke="#3A4452" stroke-width="2"/>
+<text x="960" y="676" font-family="Inter, sans-serif" font-size="26" fill="#F2F5F7" text-anchor="middle" letter-spacing="3">GARAGE</text>
+<rect x="750" y="724" width="420" height="76" rx="14" fill="none" stroke="#3A4452" stroke-width="2"/>
+<text x="960" y="772" font-family="Inter, sans-serif" font-size="26" fill="#F2F5F7" text-anchor="middle" letter-spacing="3">SETTINGS</text>
+<rect x="750" y="820" width="420" height="76" rx="14" fill="none" stroke="#3A4452" stroke-width="2"/>
+<text x="960" y="868" font-family="Inter, sans-serif" font-size="26" fill="#8E9AA8" text-anchor="middle" letter-spacing="3">EXIT</text>
+<text x="48" y="1032" font-family="JetBrains Mono, monospace" font-size="19" fill="#5C6673">v0.3.1 &#183; Fusion Host Mode</text>
+<circle cx="1690" cy="1024" r="8" fill="#5BD97C"/>
+<text x="1710" y="1032" font-family="Inter, sans-serif" font-size="20" fill="#8E9AA8">Connected</text>
+</svg>

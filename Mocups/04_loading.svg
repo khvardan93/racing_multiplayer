@@ -1,0 +1,27 @@
+<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1920" height="1080" fill="#10151E"/>
+<text x="960" y="110" font-family="Inter, sans-serif" font-size="30" font-weight="500" fill="#F2F5F7" text-anchor="middle" letter-spacing="8">RACER<tspan fill="#1FB8C9">CAR</tspan></text>
+<text x="960" y="240" font-family="Inter, sans-serif" font-size="24" fill="#8E9AA8" text-anchor="middle" letter-spacing="4">NOW LOADING</text>
+<text x="960" y="316" font-family="Inter, sans-serif" font-size="64" font-weight="500" fill="#F2F5F7" text-anchor="middle" letter-spacing="4">SUNSET CIRCUIT</text>
+<text x="960" y="366" font-family="JetBrains Mono, monospace" font-size="24" fill="#FFC94D" text-anchor="middle">Best lap &#183; 00:42.118</text>
+<path d="M 800 620 C 760 480 860 400 990 410 C 1120 420 1180 470 1165 550 C 1150 630 1060 610 1000 655 C 940 700 840 700 800 620 Z" fill="none" stroke="#3A4452" stroke-width="20" stroke-linejoin="round"/>
+<circle cx="994" cy="411" r="14" fill="#1FB8C9"/>
+<text x="1024" y="400" font-family="Inter, sans-serif" font-size="19" fill="#8E9AA8">Start / finish</text>
+<rect x="360" y="790" width="560" height="120" rx="14" fill="#0B0F16"/>
+<circle cx="424" cy="850" r="30" fill="#1FB8C9"/>
+<text x="424" y="859" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#0E2A33" text-anchor="middle">P1</text>
+<text x="476" y="842" font-family="Inter, sans-serif" font-size="26" fill="#F2F5F7">Player_1 (You)</text>
+<text x="476" y="876" font-family="Inter, sans-serif" font-size="20" fill="#5BD97C">Ready</text>
+<circle cx="876" cy="850" r="10" fill="#5BD97C"/>
+<text x="960" y="860" font-family="Inter, sans-serif" font-size="28" fill="#8E9AA8" text-anchor="middle">VS</text>
+<rect x="1000" y="790" width="560" height="120" rx="14" fill="#0B0F16"/>
+<circle cx="1064" cy="850" r="30" fill="#F08A3C"/>
+<text x="1064" y="859" font-family="Inter, sans-serif" font-size="24" font-weight="500" fill="#3A2410" text-anchor="middle">P2</text>
+<text x="1116" y="842" font-family="Inter, sans-serif" font-size="26" fill="#F2F5F7">Player_2</text>
+<text x="1116" y="876" font-family="Inter, sans-serif" font-size="20" fill="#FFC94D">Connecting&#8230;</text>
+<circle cx="1516" cy="850" r="10" fill="#FFC94D"/>
+<rect x="360" y="964" width="1200" height="14" rx="7" fill="#242C38"/>
+<rect x="360" y="964" width="768" height="14" rx="7" fill="#1FB8C9"/>
+<text x="1560" y="950" font-family="JetBrains Mono, monospace" font-size="24" fill="#F2F5F7" text-anchor="end">64%</text>
+<text x="960" y="1032" font-family="Inter, sans-serif" font-size="21" fill="#8E9AA8" text-anchor="middle">Tip: draft behind your rival to charge nitro faster</text>
+</svg>
