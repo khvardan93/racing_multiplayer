@@ -5,6 +5,13 @@ using UnityEngine.InputSystem;
 
 public class InputsManager : MonoBehaviour
 {
+    const string CAR = "Car";
+    const string STEER = "Steer";
+    const string ACCELERATE = "Accelerate";
+    const string BRAKE = "Brake";
+    const string HAND_BRAKE = "HandBrake";
+    const string RESET = "Reset";
+    
     [SerializeField] private InputActionAsset _inputActions;
 
     private InputAction _steerAction;
@@ -35,12 +42,12 @@ public class InputsManager : MonoBehaviour
 
     private void Awake()
     {
-        var carMap = _inputActions.FindActionMap("Car");
-        _steerAction = carMap.FindAction("Steer");
-        _accelerateAction = carMap.FindAction("Accelerate");
-        _brakeAction = carMap.FindAction("Brake");
-        _handBrakeAction = carMap.FindAction("HandBrake");
-        _resetAction = carMap.FindAction("Reset");
+        var carMap = _inputActions.FindActionMap(CAR);
+        _steerAction = carMap.FindAction(STEER);
+        _accelerateAction = carMap.FindAction(ACCELERATE);
+        _brakeAction = carMap.FindAction(BRAKE);
+        _handBrakeAction = carMap.FindAction(HAND_BRAKE);
+        _resetAction = carMap.FindAction(RESET);
 
         _resetAction.performed += OnResetPerformed;
         IsGamepadConnected = Gamepad.current != null;
@@ -48,13 +55,14 @@ public class InputsManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _inputActions.FindActionMap("Car").Enable();
+        _inputActions.FindActionMap(CAR).Enable();
         InputSystem.onDeviceChange += OnDeviceChange;
     }
 
     private void OnDisable()
     {
-        _inputActions.FindActionMap("Car").Disable();
+        
+        _inputActions.FindActionMap(CAR).Disable();
         InputSystem.onDeviceChange -= OnDeviceChange;
     }
 
@@ -122,14 +130,9 @@ public class InputsManager : MonoBehaviour
             }
         }
 
-        if (_uiVertical != 0)
-        {
-            vertical = _uiVertical;
-            Debug.unityLogger.Log("vertical: " + vertical);
-        }
+        if (_uiVertical != 0) vertical = _uiVertical;
         if (_uiHorizontal != 0) horizontal = _uiHorizontal;
 
-        Debug.LogError(vertical);
         
         // 2. Assign values to the struct
         myInput.Vertical = vertical;

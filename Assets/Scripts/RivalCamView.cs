@@ -30,7 +30,7 @@ namespace UI
         [Tooltip("Shown while no rival is connected (e.g. 'WAITING…' panel). Optional.")]
         [SerializeField] private GameObject offlinePlaceholder;
 
-        [Inject] ISceneService _gameManager;
+        [Inject] private GameManager _gameManager;
         
         private RawImage _image;
         private RenderTexture _rt;

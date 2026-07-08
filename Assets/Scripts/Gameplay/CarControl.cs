@@ -4,7 +4,7 @@ using Zenject;
 
 public class CarControl : NetworkBehaviour
 {
-    [Inject] private ISceneService _sceneService;
+    [Inject] private GameManager _sceneService;
 
     [Header("Motor Settings")]
     [SerializeField] private float _motorTorque = 2000;
