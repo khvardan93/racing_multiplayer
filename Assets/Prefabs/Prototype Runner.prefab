@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4497001033686257192}
   - component: {fileID: -2037311045609554181}
   - component: {fileID: 1978836757358227637}
-  - component: {fileID: 2032485264260957556}
   - component: {fileID: 7011387693446275185}
   - component: {fileID: 2905882644755690117}
   - component: {fileID: 430844043095402553}
@@ -68,8 +67,8 @@ MonoBehaviour:
   OnInput:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2032485264260957556}
-        m_TargetAssemblyTypeName: InputsManager, Assembly-CSharp
+      - m_Target: {fileID: 1978836757358227637}
+        m_TargetAssemblyTypeName: PhotonEventHandler, Assembly-CSharp
         m_MethodName: OnInput
         m_Mode: 0
         m_Arguments:
@@ -160,19 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 7224389902234348179, guid: 5aab09ac37960e34da3e0e91d4d1b3f1, type: 3}
---- !u!114 &2032485264260957556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6797366966931326048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12c64ed6cba34d80ae3ee179362c334d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputActions: {fileID: -944628639613478452, guid: 45d67cbdefc2ca44c8c9ba766c0c337a, type: 3}
 --- !u!114 &7011387693446275185
 MonoBehaviour:
   m_ObjectHideFlags: 0

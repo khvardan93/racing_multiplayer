@@ -122,9 +122,15 @@ public class InputsManager : MonoBehaviour
             }
         }
 
-        if (_uiVertical != 0) vertical = _uiVertical;
+        if (_uiVertical != 0)
+        {
+            vertical = _uiVertical;
+            Debug.unityLogger.Log("vertical: " + vertical);
+        }
         if (_uiHorizontal != 0) horizontal = _uiHorizontal;
 
+        Debug.LogError(vertical);
+        
         // 2. Assign values to the struct
         myInput.Vertical = vertical;
         myInput.Horizontal = horizontal;

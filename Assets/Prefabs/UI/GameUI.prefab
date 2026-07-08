@@ -224,6 +224,8 @@ GameObject:
   - component: {fileID: 7899929733493957899}
   - component: {fileID: 4185867867171173787}
   - component: {fileID: 4551553837923330186}
+  - component: {fileID: 6341277293516786243}
+  - component: {fileID: 2447835279862812137}
   m_Layer: 5
   m_Name: TurnRightButton
   m_TagString: Untagged
@@ -288,6 +290,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6341277293516786243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784578728994812261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb32a4aceb94b2480f456c8cadf609a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputItem
+  _onPointed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2447835279862812137}
+        m_TargetAssemblyTypeName: UI.UIInputAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2447835279862812137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784578728994812261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a194d0e95ea4100adb21531e4a0bcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputAnimator
+  _pressedScale: 1.1
+  _duration: 0.15
+  _ease: 6
 --- !u!1 &908061141161574183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1499,8 @@ GameObject:
   - component: {fileID: 4532980799622560112}
   - component: {fileID: 3618457436233352626}
   - component: {fileID: 1444224796489195908}
+  - component: {fileID: 7540665513982840720}
+  - component: {fileID: 3936023020571854890}
   m_Layer: 5
   m_Name: BrakeButton
   m_TagString: Untagged
@@ -1519,6 +1565,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7540665513982840720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338425924174321614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb32a4aceb94b2480f456c8cadf609a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputItem
+  _onPointed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3936023020571854890}
+        m_TargetAssemblyTypeName: UI.UIInputAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3936023020571854890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338425924174321614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a194d0e95ea4100adb21531e4a0bcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputAnimator
+  _pressedScale: 1.1
+  _duration: 0.15
+  _ease: 6
 --- !u!1 &3363568572581798102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2264,8 @@ GameObject:
   - component: {fileID: 7825757299366163306}
   - component: {fileID: 2302804528858532558}
   - component: {fileID: 1153809908269002294}
+  - component: {fileID: 6291844704019960731}
+  - component: {fileID: 7580358333134804602}
   m_Layer: 5
   m_Name: AccelerationButton
   m_TagString: Untagged
@@ -2240,6 +2330,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6291844704019960731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343320594423863308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb32a4aceb94b2480f456c8cadf609a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputItem
+  _onPointed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7580358333134804602}
+        m_TargetAssemblyTypeName: UI.UIInputAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7580358333134804602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343320594423863308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a194d0e95ea4100adb21531e4a0bcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputAnimator
+  _pressedScale: 1.1
+  _duration: 0.15
+  _ease: 6
 --- !u!1 &4407015905625823978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +2849,8 @@ GameObject:
   - component: {fileID: 2691862624600487771}
   - component: {fileID: 4658348794400408392}
   - component: {fileID: 6082175009996165259}
+  - component: {fileID: 1707662964881124848}
+  - component: {fileID: 1906977238002143134}
   m_Layer: 5
   m_Name: TurnLeftButton
   m_TagString: Untagged
@@ -2781,6 +2915,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1707662964881124848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941305456968484952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb32a4aceb94b2480f456c8cadf609a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputItem
+  _onPointed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906977238002143134}
+        m_TargetAssemblyTypeName: UI.UIInputAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1906977238002143134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941305456968484952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a194d0e95ea4100adb21531e4a0bcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UIInputAnimator
+  _pressedScale: 1.1
+  _duration: 0.15
+  _ease: 6
 --- !u!1 &7203331465393240968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,6 +3500,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.UIGameHud
   _pauseButton: {fileID: 4285413677858474553}
+  _accelerateInputItem: {fileID: 6291844704019960731}
+  _brakeInputItem: {fileID: 7540665513982840720}
+  _leftInputItem: {fileID: 1707662964881124848}
+  _rightInputItem: {fileID: 6341277293516786243}
 --- !u!1 &8507462468541322570
 GameObject:
   m_ObjectHideFlags: 0
