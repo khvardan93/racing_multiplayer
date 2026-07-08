@@ -14,11 +14,13 @@ public class GameManager : MonoBehaviour
 
     private int _timer;
     private Coroutine _timerCoroutine;
+    private CarControl _carControl;
     
     public event Action OnRivalSpawned;
     public event Action<int> OnTimerChange;
     
     public IReadOnlyList<Transform> SpawnPoints => _spawnPoints;
+    public CarControl CarControl => _carControl;
     
     [Inject]  private GameUIManager _gameUIManager;
     [Inject] AssetsManager _assetsManager;
@@ -35,6 +37,11 @@ public class GameManager : MonoBehaviour
     {
         _camera.Follow = target;
         _gameUIManager.ShowGameHud();
+    }
+
+    public void RegisterLocalPlayer(CarControl carControl)
+    {
+        _carControl = carControl;
     }
     
     public void SetRivalCameraTarget(Transform target)

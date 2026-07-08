@@ -4,7 +4,7 @@ using Zenject;
 
 public class CarControl : NetworkBehaviour
 {
-    [Inject] private GameManager _sceneService;
+    [Inject] private GameManager _gameManager;
 
     [Header("Motor Settings")]
     [SerializeField] private float _motorTorque = 2000;
@@ -23,7 +23,9 @@ public class CarControl : NetworkBehaviour
 
     [Header("Wheels")]
     [SerializeField] private WheelControl[] _wheels;
-    
+
+    public float Speed { get; private set; }
+
     FloatCompressed VerticalInput { get; set; }
     FloatCompressed HorizontalInput { get; set; }
     NetworkBool HandBreakInput { get; set; }
@@ -38,17 +40,14 @@ public class CarControl : NetworkBehaviour
     {
         if (Object.HasInputAuthority)
         {
-            if (_sceneService == null)
-            {
-                Debug.LogError(name + " has no scene service.");
-            }
-            else
-            {
-                _sceneService.SetCameraTarget(transform);
-                _sceneService.SetRivalCameraTarget(transform);
-            }
+            _gameManager.SetCameraTarget(transform);
+            _gameManager.RegisterLocalPlayer(this);
         }
-        
+        else
+        {
+            _gameManager.SetRivalCameraTarget(transform);
+        }
+
         // EVERYONE needs to know where this car spawned so 
         // predictions match during a reset execution.
         _initialSpawnPosition = transform.position;
@@ -71,6 +70,7 @@ public class CarControl : NetworkBehaviour
         // 2. Physics & driving calculations run smoothly on both sides now
         var forwardSpeed = Vector3.Dot(transform.forward, _rigidBody.linearVelocity);
         var speedFactor = Mathf.InverseLerp(0, _maxSpeed, forwardSpeed);
+        Speed = forwardSpeed * 3.6f; // m/s to km/h
         var currentMotorTorque = Mathf.Lerp(_motorTorque, 0, speedFactor);
         var currentSteerRange = Mathf.Lerp(_steeringRange, _steeringRangeAtMaxSpeed, speedFactor);
 

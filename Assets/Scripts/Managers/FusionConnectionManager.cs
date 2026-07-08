@@ -37,7 +37,7 @@ public class FusionConnectionManager : MonoBehaviour
     [SerializeField] private NetworkRunner _runnerPrefab;
 
     [Inject] private GameConfigs _configs;
-    [Inject] private NetworkSceneManager _sceneManager;
+    //[Inject] private NetworkSceneManager _sceneManager;
     [Inject] private DiContainer _container;
 
     public int MaxRetries => _maxRetries;
@@ -58,7 +58,7 @@ public class FusionConnectionManager : MonoBehaviour
     private void Start()
     {
         
-        ConnectWithRetry(_configs.BuildArgs(_sceneManager));
+        ConnectWithRetry(_configs.BuildArgs());
     }
 
     /// <summary>
