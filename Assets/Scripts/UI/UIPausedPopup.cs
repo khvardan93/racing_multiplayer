@@ -11,9 +11,8 @@ namespace UI
         [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _leaveButton;
 
-        [Inject] GameUIManager _gameUIManager;
-        [Inject] AssetsManager _assetsManager;
-        [Inject] GameConfigs _configs;
+        [Inject] private GameUIManager _gameUIManager;
+        [Inject] private GameManager _gameManager;
         
         private void Awake()
         {
@@ -42,8 +41,7 @@ namespace UI
         private void OnLeave()
         {
             _gameUIManager.ShowLoadingScreen();
-            if (_configs.TryGetScene(GameScenes.Menu, out var scene))
-                _assetsManager.LoadScene(scene);
+            _gameManager.LeaveGame();
         }
     }
 }

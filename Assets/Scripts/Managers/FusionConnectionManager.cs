@@ -116,6 +116,8 @@ public class FusionConnectionManager : MonoBehaviour
 
     public void Disconnect()
     {
+        Debug.Log($"[FusionConnectionManager] Disconnect");
+        
         if (_activeRunner != null)
         {
             _activeRunner.Shutdown();

@@ -16,7 +16,10 @@ public class GameManager : MonoBehaviour, ISceneService
     public IReadOnlyList<Transform> SpawnPoints => _spawnPoints;
     
     [Inject]  private GameUIManager _gameUIManager;
-
+    [Inject] AssetsManager _assetsManager;
+    [Inject] GameConfigs _configs;
+    [Inject] private FusionConnectionManager _connectionManager;
+    
     public void SetCameraTarget(Transform target)
     {
         _camera.Follow = target;
@@ -28,5 +31,12 @@ public class GameManager : MonoBehaviour, ISceneService
         _rivalCamera.Follow = target;
         _gameUIManager.ShowGameHud();
         OnRivalSpawned?.Invoke();
+    }
+
+    public void LeaveGame()
+    {
+        if (_configs.TryGetScene(GameScenes.Menu, out var scene))
+            _assetsManager.LoadScene(scene);
+        _connectionManager.Disconnect();
     }
 }

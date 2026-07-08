@@ -941,8 +941,8 @@ MonoBehaviour:
   gameManager: {fileID: 1678843727}
   _networkSceneManager: {fileID: 0}
   _inputsManager: {fileID: 0}
-  _startGameConfig: {fileID: 11400000, guid: b101bcd2edc62dc4fb4a4896fcc48a14, type: 2}
   _gameUIManager: {fileID: 913209226}
+  _fusionConnectionManager: {fileID: 193882072}
 --- !u!4 &956781747
 Transform:
   m_ObjectHideFlags: 0
@@ -1755,6 +1755,10 @@ PrefabInstance:
     - target: {fileID: 8437188783769844179, guid: 7a673afdd2c88124787f99670b2bed14, type: 3}
       propertyPath: m_Name
       value: GameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437188783769844179, guid: 7a673afdd2c88124787f99670b2bed14, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

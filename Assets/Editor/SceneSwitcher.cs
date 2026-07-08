@@ -26,13 +26,13 @@ sealed class SceneSwitcherElement : EditorToolbarDropdown
 
     void RefreshLabel(string name = null)
     {
-        text = name ?? UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        text = name ??SceneManager.GetActiveScene().name;
     }
 
     void ShowMenu()
     {
         var menu = new GenericMenu();
-        var activePath = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path;
+        var activePath = SceneManager.GetActiveScene().path;
 
         // Scenes in Build Settings (enabled only)
         var buildScenes = EditorBuildSettings.scenes;
@@ -41,11 +41,10 @@ sealed class SceneSwitcherElement : EditorToolbarDropdown
             foreach (var entry in buildScenes)
             {
                 var path = entry.path;
-                var label = (entry.enabled ? "" : "Disabled/") +
-                            Path.GetFileNameWithoutExtension(path);
+                var label = Path.GetFileNameWithoutExtension(path);
 
                 menu.AddItem(
-                    new GUIContent("Build Scenes/" + label),
+                    new GUIContent(label),
                     path == activePath,
                     () => TryOpenScene(path));
             }
