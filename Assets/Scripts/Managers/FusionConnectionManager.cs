@@ -36,7 +36,7 @@ public class FusionConnectionManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private NetworkRunner _runnerPrefab;
 
-    [Inject] private StartGameConfig _configs;
+    [Inject] private GameConfigs _configs;
     [Inject] private NetworkSceneManager _sceneManager;
     [Inject] private DiContainer _container;
 

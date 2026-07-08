@@ -1,21 +1,21 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using Zenject;
 
 namespace UI
 {
     public class UIIntro : MonoBehaviour
     {
         [SerializeField] private float _delay;
+        [Inject] private IntroManager _introManager;
 
         private void OnEnable()
         {
             Invoke(nameof(LoadGarage), _delay);
         }
 
-        //temporary, will be moved to a manager
         private void LoadGarage()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Garage");
+            _introManager.LoadGarage();
         }
     }
 }

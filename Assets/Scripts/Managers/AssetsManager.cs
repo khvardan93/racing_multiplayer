@@ -43,7 +43,7 @@ namespace Managers
         }
 
         // Unloads any currently loaded scene, then loads the addressable scene for key, invoking onLoaded when ready.
-        public void LoadScene(string key, LoadSceneMode mode, Action onLoaded)
+        public void LoadScene(string key, LoadSceneMode mode = LoadSceneMode.Single, Action onLoaded = null)
         {
             LoadSceneAsync(key, mode, onLoaded);
         }

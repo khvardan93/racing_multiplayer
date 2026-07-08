@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 337a646f4306447780754d1bc1a4c17f, type: 3}
-  m_Name: StartGameConfig
+  m_Name: GameConfig
   m_EditorClassIdentifier: 
   _gameMode: 6
   _defaultSessionName: MyRoom
@@ -18,4 +18,10 @@ MonoBehaviour:
   _playerCount: 2
   _isVisible: 1
   _isOpen: 1
-  _sceneName: Arena
+  _sceneItems:
+  - Scene: 0
+    Name: Intro
+  - Scene: 1
+    Name: Garage
+  - Scene: 2
+    Name: Arena

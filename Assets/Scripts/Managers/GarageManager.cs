@@ -1,6 +1,8 @@
 ﻿using System;
+using Managers;
 using UI;
 using UnityEngine;
+using Zenject;
 
 public enum GaragePages
 {
@@ -19,6 +21,8 @@ public class GarageManager : MonoBehaviour
     }
         
     [SerializeField] private Page[] _pages;
+    [Inject] private AssetsManager _assetsManager;
+    [Inject] private GameConfigs _configs;
 
     public void ShowPage(GaragePages type)
     {
@@ -33,6 +37,7 @@ public class GarageManager : MonoBehaviour
 
     public void LoadGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Arena");
+        if (_configs.TryGetScene(GameScenes.Game, out var scene))
+            _assetsManager.LoadScene(scene);
     }
 }

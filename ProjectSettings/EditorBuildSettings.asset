@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 05c492fd272d2c848b035de72cbb8c4e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Arena.unity
     guid: 874740ade97b7494d96c0fffb1c1c6f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Garage.unity
     guid: d6b8097a6d3924741bfb0ce43cda9f0e
   m_configObjects:
