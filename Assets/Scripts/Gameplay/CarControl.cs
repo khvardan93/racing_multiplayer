@@ -15,7 +15,9 @@ public class CarControl : NetworkBehaviour
     [SerializeField] private float _steeringRange = 30;
     [SerializeField] private float _steeringRangeAtMaxSpeed = 10;
 
-    [Header("Physics")]
+    [Header("Physics")] 
+    [SerializeField] private Transform _transform;
+    [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private float _centreOfGravityOffset = -1f;
     [SerializeField] private float _handBreakDrag = 2.5f;
     [SerializeField] private float _breakingDrag = 2.5f;
@@ -30,7 +32,6 @@ public class CarControl : NetworkBehaviour
     FloatCompressed HorizontalInput { get; set; }
     NetworkBool HandBreakInput { get; set; }
     
-    private Rigidbody _rigidBody;
     private float _defaultDrag;
     private Vector3 _initialSpawnPosition;
     private Quaternion _initialSpawnRotation;
@@ -38,22 +39,26 @@ public class CarControl : NetworkBehaviour
 
     public override void Spawned()
     {
-        if (Object.HasInputAuthority)
+        var carTransform = _transform;
+        
+        if(_gameManager)
         {
-            _gameManager.SetCameraTarget(transform);
-            _gameManager.RegisterLocalPlayer(this);
-        }
-        else
-        {
-            _gameManager.SetRivalCameraTarget(transform);
+            if (Object.HasInputAuthority)
+            {
+                _gameManager.SetCameraTarget(carTransform);
+                _gameManager.RegisterLocalPlayer(this);
+            }
+            else
+            {
+                _gameManager.SetRivalCameraTarget(carTransform);
+            }
         }
 
         // EVERYONE needs to know where this car spawned so 
         // predictions match during a reset execution.
-        _initialSpawnPosition = transform.position;
-        _initialSpawnRotation = transform.rotation;
+        _initialSpawnPosition = carTransform.position;
+        _initialSpawnRotation = carTransform.rotation;
         
-        _rigidBody = GetComponent<Rigidbody>();
         _rigidBody.centerOfMass += Vector3.up * _centreOfGravityOffset;
         _defaultDrag = _rigidBody.linearDamping;
         
@@ -62,13 +67,13 @@ public class CarControl : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-        if (!_spawned || !transform || !_rigidBody) return;
+        if (!_spawned || !_transform || !_rigidBody) return;
         
         // 1. Process inputs for BOTH Host and Client loops
         FetchNetworkInputs();
 
         // 2. Physics & driving calculations run smoothly on both sides now
-        var forwardSpeed = Vector3.Dot(transform.forward, _rigidBody.linearVelocity);
+        var forwardSpeed = Vector3.Dot(_transform.forward, _rigidBody.linearVelocity);
         var speedFactor = Mathf.InverseLerp(0, _maxSpeed, forwardSpeed);
         Speed = forwardSpeed * 3.6f; // m/s to km/h
         var currentMotorTorque = Mathf.Lerp(_motorTorque, 0, speedFactor);
