@@ -3,7 +3,7 @@ using Fusion;
 using UnityEngine;
 using Zenject;
 
-public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined
+public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined, IPlayerLeft
 {
     [SerializeField] private GameObject _playerPrefab;
 
@@ -15,7 +15,7 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined
     {
         _inputsManager.OnInput(runner, input);
     }
-    
+
     void IPlayerJoined.PlayerJoined(PlayerRef player)
     {
         if (!Runner.IsServer)
@@ -25,7 +25,7 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined
         var spawnPoints = _gameManager.SpawnPoints;
 
         if(playerCount == 2) _gameManager.StartTimer();
-        
+
         if (playerCount - 1 >= spawnPoints.Count)
         {
             Debug.LogError("Not enough spawn points");
@@ -35,7 +35,19 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined
         var spawnPoint = spawnPoints[playerCount - 1];
         var car = Runner.Spawn(_playerPrefab, spawnPoint.position, spawnPoint.rotation, player);
 
-        car.gameObject.SetActive(true);
         Runner.SetPlayerObject(player, car);
+    }
+
+    void IPlayerLeft.PlayerLeft(PlayerRef player)
+    {
+        if (!Runner.IsServer)
+            return;
+
+        var car = Runner.GetPlayerObject(player);
+        if (car == null)
+            return;
+
+        Runner.Despawn(car);
+        _gameManager.NotifyRivalLeft();
     }
 }

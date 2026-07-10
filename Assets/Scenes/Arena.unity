@@ -1047,8 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e97632c17913a45a407222683c218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameplayInstaller
-  gameManager: {fileID: 1678843727}
-  _networkSceneManager: {fileID: 0}
+  _gameManager: {fileID: 1678843727}
   _inputsManager: {fileID: 365894827}
   _gameUIManager: {fileID: 913209226}
   _fusionConnectionManager: {fileID: 658875520}
@@ -1452,7 +1451,7 @@ GameObject:
   - component: {fileID: 1678843728}
   - component: {fileID: 1678843727}
   m_Layer: 0
-  m_Name: SceneManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,7 +1911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8437188783769844179, guid: 7a673afdd2c88124787f99670b2bed14, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

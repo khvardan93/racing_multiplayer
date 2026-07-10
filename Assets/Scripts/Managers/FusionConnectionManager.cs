@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Fusion;
+using Fusion.Sockets;
 using UnityEngine;
 using Zenject;
 
@@ -12,7 +14,7 @@ using Zenject;
 ///
 /// Use this instead of (or alongside) FusionBootstrap's default connect call.
 /// </summary>
-public class FusionConnectionManager : MonoBehaviour
+public class FusionConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
 {
     public enum ConnectionState
     {
@@ -53,6 +55,9 @@ public class FusionConnectionManager : MonoBehaviour
     // Fired once on final success/failure with the runner (or null on failure).
     public event Action<NetworkRunner> OnConnectionResult;
 
+    // Fired when an already-connected session drops (server shutdown or lost connection).
+    public event Action OnSessionLost;
+
     private NetworkRunner _activeRunner;
 
     private void Start()
@@ -80,6 +85,7 @@ public class FusionConnectionManager : MonoBehaviour
             // that failed to start can leave it in a bad internal state.
             var runner = Instantiate(_runnerPrefab);
             runner.name = $"NetworkRunner (attempt {attempt})";
+            runner.AddCallbacks(this);
             _container.InjectGameObject(runner.gameObject);
 
             var result = await runner.StartGame(args);
@@ -117,11 +123,12 @@ public class FusionConnectionManager : MonoBehaviour
     public void Disconnect()
     {
         Debug.Log($"[FusionConnectionManager] Disconnect");
-        
+
         if (_activeRunner != null)
         {
-            _activeRunner.Shutdown();
+            var runner = _activeRunner;
             _activeRunner = null;
+            runner.Shutdown();
         }
 
         SetState(ConnectionState.Idle, 0);
@@ -133,4 +140,53 @@ public class FusionConnectionManager : MonoBehaviour
         OnStateChanged?.Invoke(newState, attempt, _maxRetries);
         Debug.Log($"[FusionConnectionManager] State: {newState} (attempt {attempt}/{_maxRetries})");
     }
+
+    private void HandleSessionLost(NetworkRunner runner)
+    {
+        if (runner != _activeRunner)
+            return;
+
+        _activeRunner = null;
+        SetState(ConnectionState.Idle, 0);
+        OnSessionLost?.Invoke();
+    }
+
+    #region INetworkRunnerCallbacks
+
+    public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason)
+    {
+        Debug.LogWarning($"[FusionConnectionManager] Disconnected from server: {reason}");
+        HandleSessionLost(runner);
+    }
+
+    public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)
+    {
+        Debug.LogWarning($"[FusionConnectionManager] Connect failed: {reason}");
+        HandleSessionLost(runner);
+    }
+
+    public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
+    {
+        Debug.Log($"[FusionConnectionManager] Runner shutdown: {shutdownReason}");
+        HandleSessionLost(runner);
+    }
+
+    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
+    public void OnInput(NetworkRunner runner, NetworkInput input) { }
+    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
+    public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
+    public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) { }
+    public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ReliableKey key, ArraySegment<byte> data) { }
+    public void OnReliableDataProgress(NetworkRunner runner, PlayerRef player, ReliableKey key, float progress) { }
+    public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
+    public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
+    public void OnConnectedToServer(NetworkRunner runner) { }
+    public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) { }
+    public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) { }
+    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) { }
+    public void OnSceneLoadDone(NetworkRunner runner) { }
+    public void OnSceneLoadStart(NetworkRunner runner) { }
+
+    #endregion
 }

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private CarControl _carControl;
     
     public event Action OnRivalSpawned;
+    public event Action OnRivalLeft;
     public event Action<int> OnTimerChange;
     
     public IReadOnlyList<Transform> SpawnPoints => _spawnPoints;
@@ -49,6 +50,13 @@ public class GameManager : MonoBehaviour
         _rivalCamera.Follow = target;
         _gameUIManager.ShowGameHud();
         OnRivalSpawned?.Invoke();
+    }
+
+    public void NotifyRivalLeft()
+    {
+        if(_timerCoroutine != null) StopCoroutine(_timerCoroutine);
+        _timerCoroutine = null;
+        OnRivalLeft?.Invoke();
     }
 
     public void LeaveGame()

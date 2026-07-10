@@ -142,8 +142,8 @@ public class CarControl : NetworkBehaviour
         // OR extracts historical ticks if the server is verifying/rolling back.
         if (GetInput(out NetworkCarInputData inputs))
         {
-            VerticalInput = inputs.Vertical;
-            HorizontalInput = inputs.Horizontal;
+            VerticalInput = Mathf.Clamp(inputs.Vertical, -1f, 1f);
+            HorizontalInput = Mathf.Clamp(inputs.Horizontal, -1f, 1f);
             HandBreakInput = inputs.HandBrake;
 
             // Handle the reset immediately inside the networked loop if true

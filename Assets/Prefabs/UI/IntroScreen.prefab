@@ -33,11 +33,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1500, y: -478}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 450, y: 62}
   m_SizeDelta: {x: 180, y: 8}
-  m_Pivot: {x: 1, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6002760362144881035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -96,6 +96,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 8141959200344889100}
   _rectTransform: {fileID: 9163629544217154806}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &802756130348277588
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +110,7 @@ GameObject:
   - component: {fileID: 8203039475723485542}
   - component: {fileID: 1803048240899968281}
   - component: {fileID: 4487124112309226308}
+  - component: {fileID: 7853556501150033163}
   m_Layer: 5
   m_Name: VersionLabel
   m_TagString: Untagged
@@ -128,11 +132,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1014.66}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 53.840027}
   m_SizeDelta: {x: 62, y: 23}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1803048240899968281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -233,6 +237,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7853556501150033163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802756130348277588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31973faf2a69b7040ba6affc76083ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UITextPrintAnimator
+  _printType: 0
+  _duration: 0.2
+  _stepLength: 0.1
+  _delay: 0
+  _playOnEnable: 1
+  _loop: 0
+  _loopCharCount: 0
+  _loopStepDelay: 0
+  _text: {fileID: 4487124112309226308}
 --- !u!1 &953185861847395466
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,11 +450,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 520, y: -514}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -310, y: 26}
   m_SizeDelta: {x: 260, y: 8}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3826228948547094871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -488,6 +513,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 7820319086756272833}
   _rectTransform: {fileID: 5025541303457317629}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3177678328592117478
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +527,7 @@ GameObject:
   - component: {fileID: 6840913145313123778}
   - component: {fileID: 3081271796881828991}
   - component: {fileID: 2103031843820304507}
+  - component: {fileID: 1787273954912654166}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -521,11 +550,11 @@ RectTransform:
   - {fileID: 2708220192244747907}
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 810, y: -880}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 197}
   m_SizeDelta: {x: 300, y: 6}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3081271796881828991
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -564,6 +593,29 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1787273954912654166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3177678328592117478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e765010794747f39be43539f3964d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
+  _duration: 0.3
+  _delay: 0
+  _growAnchor: 0
+  _ease: 22
+  _playOnEnable: 1
+  _fade: 1
+  _image: {fileID: 2103031843820304507}
+  _rectTransform: {fileID: 6840913145313123778}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3478132840919691386
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,11 +648,11 @@ RectTransform:
   - {fileID: 8315900187344784425}
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -419.8}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 45.200012}
   m_SizeDelta: {x: 730, y: 150}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3545395287226993451
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,11 +686,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1560, y: -550}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 490, y: -10}
   m_SizeDelta: {x: 220, y: 8}
-  m_Pivot: {x: 1, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6819769015579606053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -697,6 +749,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 8135174382872845618}
   _rectTransform: {fileID: 5136372520282858964}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4342826332456093573
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088f381af97044228f892e4a1932f65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.UIIntro
+  _delay: 4
 --- !u!1 &4555965910934353332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,11 +1147,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360, y: -550}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -490, y: -10}
   m_SizeDelta: {x: 220, y: 8}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6151894871826779405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1154,6 +1210,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 5128106811951943598}
   _rectTransform: {fileID: 4213677999580097425}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5373529630842360359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,9 +1246,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -576}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -36}
   m_SizeDelta: {x: 320, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1645694637059240538
@@ -1250,6 +1309,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 3609152611258625847}
   _rectTransform: {fileID: 852421243477920884}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5527577510965374723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,11 +1345,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -595}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -69.5}
   m_SizeDelta: {x: 434, y: 29}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2243010567333567914
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1442,11 +1504,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1400, y: -514}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 310, y: 26}
   m_SizeDelta: {x: 260, y: 8}
-  m_Pivot: {x: 1, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7742554232741384524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1505,6 +1567,9 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 868447673659398167}
   _rectTransform: {fileID: 3388244566468711909}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6141468759985056561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,13 +1818,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.UILineAnimator
   _duration: 3
-  _delay: 0
+  _delay: 0.2
   _growAnchor: 1
   _ease: 1
   _playOnEnable: 1
   _fade: 0
   _image: {fileID: 5237715724919109872}
   _rectTransform: {fileID: 2708220192244747907}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8343645933959362236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,11 +1861,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6674541045133728866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 420, y: -478}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -450, y: 62}
   m_SizeDelta: {x: 180, y: 8}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6057953618909496016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1856,3 +1924,6 @@ MonoBehaviour:
   _fade: 1
   _image: {fileID: 1381246932921063712}
   _rectTransform: {fileID: 3084165441813343162}
+  _onShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
