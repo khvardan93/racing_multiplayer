@@ -1,0 +1,49 @@
+name: Build Unity Android 🤖
+
+on:
+  push:
+    branches:
+      - main # Triggers the workflow on every push to the main branch
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Project 🛠️
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true # Ensures Large File Storage assets are pulled correctly
+
+      # 2. Cache Unity Library folder to speed up future builds
+      - name: Cache Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-Android-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-Android-
+            Library-
+
+      # 3. Run the Unity Build using GameCI
+      - name: Build Android
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          # If using a license file instead of user/pass, use:
+          # UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: Android
+
+      # 4. Upload the build artifact
+      - name: Upload Android build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Android-Build
+          path: build/Android
