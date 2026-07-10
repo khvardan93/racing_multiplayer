@@ -1,19 +1,24 @@
-name: Acquire Unity License
-
-on:
-  workflow_dispatch:
+name: Acquire ULF
+on: workflow_dispatch
 
 jobs:
-  activation:
+  activate:
     runs-on: ubuntu-latest
-
+    container: unityci/editor:2022.3.42f1-base-3
     steps:
-      - name: Request activation file
-        id: activation
-        uses: game-ci/unity-request-activation-file@v2
+      - name: Activate personal license
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        run: |
+          xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
+            unity-editor -batchmode -nographics -quit \
+            -username "$UNITY_EMAIL" -password "$UNITY_PASSWORD" \
+            -logFile /dev/stdout || true
+          ls -la /root/.local/share/unity3d/Unity/ || true
 
-      - name: Upload activation file
+      - name: Upload ULF
         uses: actions/upload-artifact@v4
         with:
-          name: UnityActivationFile
-          path: ${{ steps.activation.outputs.filePath }}
+          name: Unity_lic
+          path: /root/.local/share/unity3d/Unity/Unity_lic.ulf
