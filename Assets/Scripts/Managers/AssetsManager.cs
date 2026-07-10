@@ -77,8 +77,8 @@ namespace Managers
 
         private async void LoadSceneAsync(string key, LoadSceneMode mode, Action onLoaded)
         {
-            if (_loadedScene.HasValue)
-                await UnloadSceneInternalAsync();
+            //if (_loadedScene.HasValue)
+            //    await UnloadSceneInternalAsync();
 
             var handle = Addressables.LoadSceneAsync(key, mode);
             _loadedScene = await handle.Task;
