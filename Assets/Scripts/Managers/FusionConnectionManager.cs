@@ -101,10 +101,14 @@ public class FusionConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
             Debug.LogWarning($"[FusionConnectionManager] Attempt {attempt} failed: " +
                               $"{result.ShutdownReason} - {result.ErrorMessage}");
 
-            // Clean up the failed runner before retrying.
+            // Clean up the failed runner before retrying. Shutdown() must be used
+            // instead of a bare Destroy() - destroying the GameObject directly can
+            // leave Fusion's internal simulation still ticking against components
+            // that are mid-destruction, which crashes IL2CPP builds with a native
+            // SIGSEGV inside the player-joined/left callback invoker.
             if (runner != null)
             {
-                Destroy(runner.gameObject);
+                runner.Shutdown(true, ShutdownReason.Error, true);
             }
 
             if (attempt > _maxRetries)

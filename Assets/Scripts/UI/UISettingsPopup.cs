@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
+using Managers;
 
 namespace UI
 {
@@ -9,6 +11,8 @@ namespace UI
         [SerializeField] private Button _revertButton;
         [SerializeField] private Button _saveButton;
 
+        [Inject] private GameUIManager _gameUIManager;
+        
         private void Awake()
         {
             _closeButton.onClick.AddListener(OnClose);
@@ -23,7 +27,11 @@ namespace UI
             _saveButton.onClick.RemoveListener(OnSave);
         }
         
-        private void OnClose(){}
+        private void OnClose()
+        {
+            _gameUIManager.ShowPausePopup();
+        }
+        
         private void OnRevert(){}
         private void OnSave(){}
     }

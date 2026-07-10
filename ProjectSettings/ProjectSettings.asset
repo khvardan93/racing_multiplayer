@@ -8,12 +8,12 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 2
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: My project
+  companyName: Khvardan
+  productName: RacerCar
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 1920
-  defaultScreenHeightWeb: 1080
+  defaultScreenWidthWeb: 960
+  defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
@@ -144,7 +144,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.0.2
+  bundleVersion: 0.0.3
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
@@ -168,7 +168,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.UnityTechnologies.Mobile3DTemplate
+    Android: com.khvardan.racercar
     Standalone: com.UnityTechnologies.Mobile3DTemplate
     iPhone: com.UnityTechnologies.Mobile3DTemplate
   buildNumber:
@@ -298,7 +298,14 @@ PlayerSettings:
   AndroidAppBundleSizeToValidate: 150
   AndroidReportGooglePlayAppDependencies: 1
   androidSymbolsSizeThreshold: 800
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: f2d770fb9964cc349b72dec82f996deb, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: iPhone
     m_Icons:
@@ -399,7 +406,9 @@ PlayerSettings:
       m_SubKind: App Store
   - m_BuildTarget: Android
     m_Icons:
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: a0c34d37fcef3c447958514ac20e937d, type: 3}
+      - {fileID: 2800000, guid: d3f8cd0aa5dbce5408b28fa60cf1d37a, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
@@ -429,7 +438,8 @@ PlayerSettings:
       m_Height: 81
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: f2d770fb9964cc349b72dec82f996deb, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 1
@@ -459,32 +469,38 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 1
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: f2d770fb9964cc349b72dec82f996deb, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 96
       m_Height: 96
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 0}
       m_Width: 36
       m_Height: 36
       m_Kind: 0
@@ -529,6 +545,9 @@ PlayerSettings:
   m_BuildTargetBatching:
   - m_BuildTarget: WebGL
     m_StaticBatching: 0
+    m_DynamicBatching: 0
+  - m_BuildTarget: Android
+    m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
@@ -838,7 +857,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: FUSION_LOGLEVEL_DEBUG;FUSION_WEAVER;FUSION2;FUSION_2;FUSION_2_0;FUSION_2_0_12;FUSION_2_OR_NEWER;FUSION_2_0_OR_NEWER
+    Android: FUSION_LOGLEVEL_DEBUG;FUSION_WEAVER;FUSION2;FUSION_2;FUSION_2_0;FUSION_2_0_12;FUSION_2_OR_NEWER;FUSION_2_0_OR_NEWER;SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY
     EmbeddedLinux: FUSION_LOGLEVEL_DEBUG
     GameCoreScarlett: FUSION_LOGLEVEL_DEBUG
     GameCoreXboxOne: FUSION_LOGLEVEL_DEBUG
@@ -961,7 +980,7 @@ PlayerSettings:
   cloudProjectId: 0d94f043-7b57-42ae-b0e1-ed10426a8cb7
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project 2026-05-22_20-22-51
+  projectName: RacerCar
   organizationId: khvardan
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
