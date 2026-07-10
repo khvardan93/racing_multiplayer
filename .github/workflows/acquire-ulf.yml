@@ -1,0 +1,12 @@
+- name: Activate personal license
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        run: |
+          /opt/unity/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client \
+            --activate-ulf --username "$UNITY_EMAIL" --password "$UNITY_PASSWORD" || true
+          echo "=== Searching for ULF files ==="
+          find / -name "*.ulf" 2>/dev/null || true
+          mkdir -p /tmp/ulf
+          find / -name "*.ulf" -exec cp {} /tmp/ulf/ \; 2>/dev/null || true
+          ls -la /tmp/ulf/
