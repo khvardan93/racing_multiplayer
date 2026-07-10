@@ -1,0 +1,48 @@
+name: Build and Deploy Unity WebGL 🚀
+
+on:
+  push:
+    branches:
+      - main # Triggers the workflow on every push to the main branch
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Project 🛠️
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true # Ensures Large File Storage assets are pulled correctly
+
+      # 2. Cache Unity Library folder to speed up future builds
+      - name: Cache Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-WebGL-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-WebGL-
+            Library-
+
+      # 3. Run the Unity Build using GameCI
+      - name: Build WebGL
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          # If using a license file instead of user/pass, use:
+          # UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+
+      # 4. Deploy the build artifacts to GitHub Pages
+      - name: Deploy to GitHub Pages 🌐
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build/WebGL # The default output folder for GameCI WebGL builds
+          branch: gh-pages # Deploys the build files to a separate clean branch
