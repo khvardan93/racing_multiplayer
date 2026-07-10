@@ -124,7 +124,7 @@ public class FusionConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         OnConnectionResult?.Invoke(null);
     }
 
-    public void Disconnect()
+    public async Task Disconnect()
     {
         Debug.Log($"[FusionConnectionManager] Disconnect");
 
@@ -132,7 +132,11 @@ public class FusionConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         {
             var runner = _activeRunner;
             _activeRunner = null;
-            runner.Shutdown();
+            // Must be awaited - the runner's GameObject can't be safely destroyed
+            // (e.g. by unloading the scene it lives in) until Fusion's simulation
+            // has actually finished shutting down, otherwise callbacks still in
+            // flight (like PlayerJoined/Left) crash IL2CPP with a native SIGSEGV.
+            await runner.Shutdown();
         }
 
         SetState(ConnectionState.Idle, 0);

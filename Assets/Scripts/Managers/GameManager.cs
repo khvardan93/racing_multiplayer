@@ -59,11 +59,15 @@ public class GameManager : MonoBehaviour
         OnRivalLeft?.Invoke();
     }
 
-    public void LeaveGame()
+    public async void LeaveGame()
     {
+        // Wait for the Fusion runner to fully shut down before unloading the
+        // scene it lives in - unloading first destroys it mid-simulation and
+        // crashes IL2CPP builds natively.
+        await _connectionManager.Disconnect();
+
         if (_configs.TryGetScene(GameScenes.Menu, out var scene))
             _assetsManager.LoadScene(scene);
-        _connectionManager.Disconnect();
     }
 
     public void StartTimer()
