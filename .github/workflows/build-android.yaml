@@ -6,7 +6,7 @@ on:
       - main # Triggers the workflow on every push to the main branch
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -47,3 +47,11 @@ jobs:
         with:
           name: Android-Build
           path: build/Android
+
+      # 5. Publish the APK(s) to a GitHub release
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-build-${{ github.run_number }}
+          name: Android Build ${{ github.run_number }}
+          files: build/Android/**/*.apk
