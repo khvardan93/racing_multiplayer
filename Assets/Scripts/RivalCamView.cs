@@ -1,5 +1,4 @@
-﻿using System;
-using Unity.Cinemachine; // CM3 (Unity 6). For Cinemachine 2.x use: using Cinemachine;
+﻿using Unity.Cinemachine; // CM3 (Unity 6). For Cinemachine 2.x use: using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -23,7 +22,7 @@ namespace UI
         [Header("Rendering")]
         [SerializeField] private Camera rivalCamera;
         [SerializeField] private CinemachineBrain rivalBrain; // optional; auto-found from camera
-        [SerializeField] private Vector2Int resolution = new(256, 144);
+        [SerializeField] private Vector2Int resolution = new(128, 72);
         [SerializeField, Range(1, 6)] private int renderEveryNthFrame = 3;
 
         [Header("UI")]
@@ -95,16 +94,16 @@ namespace UI
             // Render only every Nth frame; RT keeps its last contents in between.
             bool renderThisFrame = Time.frameCount % renderEveryNthFrame == 0;
             rivalCamera.enabled = renderThisFrame;
-            if (rivalBrain != null)
-                rivalBrain.enabled = renderThisFrame;
+            /*if (rivalBrain != null)
+                rivalBrain.enabled = renderThisFrame;*/
         }
 
         private void SetFeedActive(bool active)
         {
             if (rivalCamera != null) rivalCamera.enabled = active;
-            if (rivalBrain != null) rivalBrain.enabled = active;
+            /*if (rivalBrain != null) rivalBrain.enabled = active;
 
-            _image.enabled = active;
+            _image.enabled = active;*/
             if (offlinePlaceholder != null)
                 offlinePlaceholder.SetActive(!active);
         }
