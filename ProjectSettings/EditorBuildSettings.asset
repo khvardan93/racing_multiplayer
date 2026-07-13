@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 05c492fd272d2c848b035de72cbb8c4e
   - enabled: 0
+    path: Assets/Scenes/Garage.unity
+    guid: d6b8097a6d3924741bfb0ce43cda9f0e
+  - enabled: 0
     path: Assets/Scenes/Arena.unity
     guid: 874740ade97b7494d96c0fffb1c1c6f7
   - enabled: 0
-    path: Assets/Scenes/Garage.unity
-    guid: d6b8097a6d3924741bfb0ce43cda9f0e
+    path: Assets/Scenes/GreenArena.unity
+    guid: 83760dd98fe89364daec0c8817772284
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: cc0e22bb223c4c54c8dba5194a18efe6, type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 9fce3d80d774d0d4db46d8dc3f243dd3, type: 2}
