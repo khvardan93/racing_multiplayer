@@ -57,8 +57,6 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined, IPlayerLef
         var playerCount = Runner.ActivePlayers.Count();
         var spawnPoints = _gameManager.SpawnPoints;
 
-        if (playerCount == 2) _gameManager.StartTimer();
-
         if (playerCount - 1 >= spawnPoints.Count)
         {
             Debug.LogError("Not enough spawn points");
@@ -74,8 +72,7 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined, IPlayerLef
     private void DespawnCar(PlayerRef player)
     {
         var car = Runner.GetPlayerObject(player);
-        if (car == null)
-            return;
+        if (!car) return;
 
         Runner.Despawn(car);
         _gameManager.NotifyRivalLeft();

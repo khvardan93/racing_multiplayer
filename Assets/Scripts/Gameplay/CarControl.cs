@@ -51,6 +51,7 @@ public class CarControl : NetworkBehaviour
             else
             {
                 _gameManager.SetRivalCameraTarget(carTransform);
+                _gameManager.StartTimer();
             }
         }
 
