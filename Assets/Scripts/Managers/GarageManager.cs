@@ -24,6 +24,11 @@ public class GarageManager : MonoBehaviour
     [Inject] private AssetsManager _assetsManager;
     [Inject] private GameConfigs _configs;
 
+    private void Start()
+    {
+        ShowPage(GaragePages.MainMenu);
+    }
+
     public void ShowPage(GaragePages type)
     {
         foreach (var page in _pages)
