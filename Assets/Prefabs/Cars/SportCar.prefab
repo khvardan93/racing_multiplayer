@@ -913,8 +913,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9098206, y: 1.6064789, z: 7.091957}
-  m_Center: {x: 0.5389252, y: 1.9980959, z: 0.017917633}
+  m_Size: {x: 3.01, y: 1.6064789, z: 7.091957}
+  m_Center: {x: 0.53, y: 1.9980959, z: 0.017917633}
 --- !u!114 &7482342952930887259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +930,7 @@ MonoBehaviour:
   _motorTorque: 900
   _brakeTorque: 900
   _maxSpeed: 40
-  _steeringRange: 20
+  _steeringRange: 10
   _steeringRangeAtMaxSpeed: 5
   _transform: {fileID: 3835740008116577521}
   _rigidBody: {fileID: 1098802952698926192}
