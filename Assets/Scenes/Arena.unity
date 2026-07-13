@@ -204,21 +204,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 6068846d6722353469b01d606c8a145e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6068846d6722353469b01d606c8a145e, type: 3}
       propertyPath: m_RootOrder
@@ -306,7 +334,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &193882071
 Transform:
@@ -416,7 +444,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &368549022
 Transform:
@@ -530,7 +558,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 35.983395
   orthographic: 0
   orthographic size: 5
@@ -735,6 +763,10 @@ PrefabInstance:
       propertyPath: Lens.FieldOfView
       value: 35.983395
       objectReference: {fileID: 0}
+    - target: {fileID: 6584716487623744764, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
+      propertyPath: Lens.FarClipPlane
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8365912926377230281, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47
@@ -866,14 +898,14 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 35.983395
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 29
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -913,9 +945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 0
+  m_RequiresOpaqueTextureOption: 0
   m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
@@ -1089,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 6584716487623744764, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
       propertyPath: Lens.FieldOfView
       value: 35.983395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584716487623744764, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
+      propertyPath: Lens.FarClipPlane
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8365912926377230281, guid: 7f4bcf7220952174987e780123cd5307, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1303,7 +1339,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1443992125
 Transform:
