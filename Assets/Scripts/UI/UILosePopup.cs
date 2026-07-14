@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
+using Managers;
 
 namespace UI
 {
@@ -8,6 +10,9 @@ namespace UI
         [SerializeField] private Button _rematchButton;
         [SerializeField] private Button _mainMenuButton;
 
+        [Inject] private GameManager _gameManager;
+        [Inject] private GameUIManager _gameUIManager;
+        
         private void Awake()
         {
             _rematchButton.onClick.AddListener(OnRematch);
@@ -22,12 +27,14 @@ namespace UI
 
         private void OnRematch()
         {
-            
+            _gameUIManager.ShowLoadingScreen();
+            _gameManager.ReloadGame();
         }
 
         private void OnMainMenu()
         {
-            
+            _gameUIManager.ShowLoadingScreen();
+            _gameManager.LeaveGame();
         }
     }
 }
