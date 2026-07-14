@@ -3,6 +3,8 @@ using Fusion;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+namespace Managers
+{
 public class InputsManager : MonoBehaviour
 {
     const string CAR = "Car";
@@ -146,4 +148,5 @@ public class InputsManager : MonoBehaviour
         // 3. Hand it over to Fusion
         input.Set(myInput);
     }
+}
 }

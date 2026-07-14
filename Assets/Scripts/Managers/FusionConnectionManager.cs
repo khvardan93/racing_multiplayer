@@ -6,6 +6,8 @@ using Fusion.Sockets;
 using UnityEngine;
 using Zenject;
 
+namespace Managers
+{
 /// <summary>
 /// Wraps NetworkRunner.StartGame with automatic retry logic.
 /// Useful because the first connection attempt to Photon's Name Server can
@@ -204,4 +206,5 @@ public class FusionConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     public void OnSceneLoadStart(NetworkRunner runner) { }
 
     #endregion
+}
 }

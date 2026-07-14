@@ -1,5 +1,4 @@
 ﻿using System;
-using Managers;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -11,38 +10,41 @@ public enum GaragePages
     LoadingScreen,
 }
 
-public class GarageManager : MonoBehaviour
+namespace Managers
 {
-    [Serializable]
-    public struct Page
+    public class GarageManager : MonoBehaviour
     {
-        public GaragePages Type;
-        public UIBaseItem Item;
-    }
-        
-    [SerializeField] private Page[] _pages;
-    [Inject] private AssetsManager _assetsManager;
-    [Inject] private GameConfigs _configs;
-
-    private void Start()
-    {
-        ShowPage(GaragePages.MainMenu);
-    }
-
-    public void ShowPage(GaragePages type)
-    {
-        foreach (var page in _pages)
+        [Serializable]
+        public struct Page
         {
-            if (page.Type == type)
-                page.Item.Show();
-            else
-                page.Item.Hide();
+            public GaragePages Type;
+            public UIBaseItem Item;
         }
-    }
 
-    public void LoadGame()
-    {
-        if (_configs.TryGetScene(GameScenes.Game, out var scene))
-            _assetsManager.LoadScene(scene);
+        [SerializeField] private Page[] _pages;
+        [Inject] private AssetsManager _assetsManager;
+        [Inject] private GameConfigs _configs;
+
+        private void Start()
+        {
+            ShowPage(GaragePages.MainMenu);
+        }
+
+        public void ShowPage(GaragePages type)
+        {
+            foreach (var page in _pages)
+            {
+                if (page.Type == type)
+                    page.Item.Show();
+                else
+                    page.Item.Hide();
+            }
+        }
+
+        public void LoadGame()
+        {
+            if (_configs.TryGetScene(GameScenes.Game, out var scene))
+                _assetsManager.LoadScene(scene);
+        }
     }
 }
