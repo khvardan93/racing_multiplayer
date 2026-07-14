@@ -20,11 +20,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 874740ade97b7494d96c0fffb1c1c6f7
-    m_Address: Arena
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d6b8097a6d3924741bfb0ce43cda9f0e
     m_Address: Garage
     m_ReadOnly: 0
