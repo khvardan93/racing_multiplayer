@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Fusion;
+using Managers;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +12,7 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined, IPlayerLef
     [Inject] private GameManager _gameManager;
     [Inject] private DiContainer _container;
     [Inject] private InputsManager _inputsManager;
+    [Inject] private GameUIManager _gameUIManager;
 
     // Players pending a car spawn/despawn, drained on the next Update. Fusion's
     // IL2CPP-compiled callback invoker crashes natively (SIGSEGV) if Runner.Spawn
@@ -49,6 +51,7 @@ public class PhotonEventHandler : SimulationBehaviour, IPlayerJoined, IPlayerLef
         if (!Runner.IsServer)
             return;
 
+        _gameUIManager.ShowWinPopup();
         _pendingLeaves.Enqueue(player);
     }
 

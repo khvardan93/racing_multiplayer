@@ -1,10 +1,13 @@
 ﻿using Fusion;
 using UnityEngine;
 
-public class NetworkSceneManager : NetworkSceneManagerDefault
+namespace Managers
 {
-    private void Awake()
+    public class NetworkSceneManager : NetworkSceneManagerDefault
     {
-        Debug.Log("NetworkSceneManager initialized");
+        private void Awake()
+        {
+            Debug.Log("NetworkSceneManager initialized");
+        }
     }
 }

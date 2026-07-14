@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.Collections;
-using Managers;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
 using System;
 
+namespace Managers
+{
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private CinemachineCamera _camera;
@@ -90,4 +91,5 @@ public class GameManager : MonoBehaviour
 
         waiter = null;
     }
+}
 }

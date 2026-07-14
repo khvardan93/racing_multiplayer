@@ -1,4 +1,5 @@
-﻿using Unity.Cinemachine; // CM3 (Unity 6). For Cinemachine 2.x use: using Cinemachine;
+﻿using Managers;
+using Unity.Cinemachine; // CM3 (Unity 6). For Cinemachine 2.x use: using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;

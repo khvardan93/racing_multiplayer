@@ -46,5 +46,18 @@ namespace Managers
             _settingsPopup.Show();
             _currentUI = _settingsPopup;
         }
+
+        public void ShowWinPopup()
+        {
+            _currentUI?.Hide();
+            _winPopup.Show();
+            _currentUI = _winPopup;
+        }
+        
+        public void ShowLosePopup(){
+            _currentUI?.Hide();
+            _losePopup.Show();
+            _currentUI = _losePopup;
+        }
     }
 }
