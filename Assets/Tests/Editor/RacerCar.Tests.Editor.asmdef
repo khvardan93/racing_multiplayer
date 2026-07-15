@@ -5,7 +5,7 @@
         "Assembly-CSharp",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        ""
+        "Racer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [
