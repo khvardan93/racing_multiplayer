@@ -1,5 +1,5 @@
 {
-    "name": "ReacerEditor",
+    "name": "Racer.Editor",
     "rootNamespace": "",
     "references": [
         "GUID:f0d359ac0bbc142478ebc479379059c8"

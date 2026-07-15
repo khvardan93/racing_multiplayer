@@ -55,8 +55,8 @@ public class FusionConnectionManagerTests
     public void RunnerPrefab_PropertyIsReadable()
     {
         var prefab = _connectionManager.RunnerPrefab;
-        // Can be null if not assigned
-        Assert.IsNotNull(prefab) || Assert.IsNull(prefab);
+        // Just verifies the property is readable without throwing; it can be null if not assigned.
+        _ = prefab;
     }
 
     [Test]

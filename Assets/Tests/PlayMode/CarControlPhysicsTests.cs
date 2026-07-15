@@ -152,12 +152,12 @@ public class CarControlPhysicsTests
         yield return null;
 
         // Verify position reset
-        Assert.AreEqual(initialPos, _carObject.transform.position, 0.01f);
-        Assert.AreEqual(initialRot, _carObject.transform.rotation, 0.01f);
+        Assert.LessOrEqual(Vector3.Distance(initialPos, _carObject.transform.position), 0.01f);
+        Assert.LessOrEqual(Quaternion.Angle(initialRot, _carObject.transform.rotation), 0.01f);
 
         // Verify velocities cleared
-        Assert.AreEqual(Vector3.zero, _rigidbody.linearVelocity, 0.01f);
-        Assert.AreEqual(Vector3.zero, _rigidbody.angularVelocity, 0.01f);
+        Assert.LessOrEqual(_rigidbody.linearVelocity.magnitude, 0.01f);
+        Assert.LessOrEqual(_rigidbody.angularVelocity.magnitude, 0.01f);
     }
 
     [UnityTest]

@@ -40,6 +40,8 @@ public class GameConfigs : ScriptableObject
 
     private void OnEnable()
     {
+        if (_sceneItems == null) return;
+
         foreach (var sceneItem in _sceneItems)
         {
             _scenes[sceneItem.Scene] = sceneItem.Name;
