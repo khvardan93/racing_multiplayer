@@ -2,6 +2,7 @@ using Managers;
 using NUnit.Framework;
 using UnityEngine;
 using UI;
+using UnityEngine.UI;
 
 public class VirtualJoystickTests
 {

@@ -2,42 +2,20 @@
     "name": "RacerCar.Tests.PlayMode",
     "rootNamespace": "",
     "references": [
-        "Assembly-CSharp",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Racer"
     ],
-    "includePlatforms": [],
-    "excludePlatforms": [
-        "Android",
-        "Editor",
-        "EmbeddedLinux",
-        "iOS",
-        "Kepler",
-        "LinuxStandalone64",
-        "CloudRendering",
-        "macOSStandalone",
-        "Switch2",
-        "Switch",
-        "PS4",
-        "PS5",
-        "QNX",
-        "tvOS",
-        "WSA",
-        "VisionOS",
-        "WebGL",
-        "WindowsStandalone32",
-        "WindowsStandalone64",
-        "WindowsStandalone32Server",
-        "WindowsStandalone64Server",
-        "GameCoreXboxOne",
-        "XboxOne",
-        "GameCoreScarlett"
+    "includePlatforms": [
+        "Editor"
     ],
+    "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll"
+        "nunit.framework.dll",
+        "Fusion.Runtime.dll",
+        "Fusion.Common.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [

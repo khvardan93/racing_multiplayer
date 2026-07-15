@@ -85,8 +85,6 @@ public class InputsManagerRuntimeTests
     [UnityTest]
     public IEnumerator InputsManager_GamepadConnectionChangedEventExists()
     {
-        var eventHandler = new System.EventHandler<bool>((connected) => { });
-
         // Subscribe to the event
         bool subscribed = false;
         try

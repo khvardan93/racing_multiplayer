@@ -14,7 +14,6 @@ public class GameUIManagerTests
     private GameObject _losePopupObj;
     private GameObject _winPopupObj;
     private GameObject _gameHudObj;
-    private GameObject _attentionPopupObj;
 
     [SetUp]
     public void SetUp()
@@ -41,9 +40,6 @@ public class GameUIManagerTests
         _gameHudObj = new GameObject("GameHud");
         var gameHud = _gameHudObj.AddComponent<UIGameHud>();
 
-        _attentionPopupObj = new GameObject("AttentionPopup");
-        var attentionPopup = _attentionPopupObj.AddComponent<UIAttentionPopup>();
-
         // Set serialized fields via reflection
         var loadingField = typeof(GameUIManager).GetField("_loadingScreen",
             System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
@@ -68,10 +64,6 @@ public class GameUIManagerTests
         var hudField = typeof(GameUIManager).GetField("_gameHud",
             System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
         hudField.SetValue(_gameUIManager, gameHud);
-
-        var attentionField = typeof(GameUIManager).GetField("_attentionPopup",
-            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        attentionField.SetValue(_gameUIManager, attentionPopup);
     }
 
     [TearDown]
@@ -84,7 +76,6 @@ public class GameUIManagerTests
         Object.DestroyImmediate(_losePopupObj);
         Object.DestroyImmediate(_winPopupObj);
         Object.DestroyImmediate(_gameHudObj);
-        Object.DestroyImmediate(_attentionPopupObj);
     }
 
     [Test]
