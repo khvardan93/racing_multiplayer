@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
-using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
 public enum GameScenes
