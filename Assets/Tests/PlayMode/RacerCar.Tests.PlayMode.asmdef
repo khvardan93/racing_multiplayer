@@ -4,7 +4,8 @@
     "references": [
         "Assembly-CSharp",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "Racer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [

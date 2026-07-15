@@ -13,16 +13,17 @@ namespace RacerCar.Editor
 
         public void OnPreprocessBuild(BuildReport report)
         {
-            if (report.summary.platform != BuildTarget.WebGL)
-                return;
-
             if (!PhotonAppSettings.TryGetGlobal(out var settings))
                 return;
 
-            if (settings.AppSettings.Protocol == ConnectionProtocol.WebSocket)
+            var protocol = report.summary.platform == BuildTarget.WebGL
+                ? ConnectionProtocol.WebSocket
+                : ConnectionProtocol.Udp;
+            
+            if (settings.AppSettings.Protocol == protocol)
                 return;
 
-            settings.AppSettings.Protocol = ConnectionProtocol.WebSocket;
+            settings.AppSettings.Protocol = protocol;
             EditorUtility.SetDirty(settings);
             AssetDatabase.SaveAssets();
         }
