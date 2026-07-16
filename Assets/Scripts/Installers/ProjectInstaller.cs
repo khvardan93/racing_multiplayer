@@ -10,5 +10,6 @@ public class ProjectInstaller : MonoInstaller
     {
         Container.Bind<AssetsManager>().FromNewComponentOnRoot().AsSingle().NonLazy();
         Container.BindInstance(_gameConfigs).AsSingle();
+        Container.Bind<DataManager>().AsSingle().NonLazy();
     }
 }

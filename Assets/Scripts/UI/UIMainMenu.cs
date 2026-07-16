@@ -13,6 +13,7 @@ namespace ui
         [SerializeField] private UIBaseItem _attentionPopup;
 
         [Inject] private GarageManager _garageManager;
+        [Inject] private DataManager _dataManager;
         
         private void Awake()
         {
@@ -28,6 +29,8 @@ namespace ui
 
         private void OnEnable()
         {
+            if(_dataManager.TryGet<bool>("attention_popup", out var state) && state)
+                return;
             Invoke(nameof(TryShowAttentionPopup), 1f);
         }
 
@@ -50,6 +53,7 @@ namespace ui
         
         private void OnSettings()
         {
+            _dataManager.Set("attention_popup", true);
             _garageManager.ShowPage(GaragePages.SettingsMenu);
         }
 
