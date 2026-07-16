@@ -32,10 +32,14 @@ public class FusionIntegrationTests
         rb.mass = 1000;
         rb.linearDamping = 0.05f;
 
-        // Add wheel colliders
+        // Add wheel colliders - each needs its own GameObject, a WheelCollider
+        // can't be added more than once per object.
         for (int i = 0; i < 4; i++)
         {
-            var wheelCollider = _carObject.AddComponent<WheelCollider>();
+            var wheelObject = new GameObject($"Wheel{i}");
+            wheelObject.transform.SetParent(_carObject.transform);
+
+            var wheelCollider = wheelObject.AddComponent<WheelCollider>();
             wheelCollider.suspensionDistance = 0.3f;
             wheelCollider.mass = 20;
         }

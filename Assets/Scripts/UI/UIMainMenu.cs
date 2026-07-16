@@ -10,6 +10,7 @@ namespace ui
     {
         [SerializeField] private Button _playButton;
         [SerializeField] private Button _settingsButton;
+        [SerializeField] private UIBaseItem _attentionPopup;
 
         [Inject] private GarageManager _garageManager;
         
@@ -24,7 +25,17 @@ namespace ui
             _playButton.onClick.RemoveListener(OnPlay);
             _settingsButton.onClick.RemoveListener(OnSettings);
         }
-        
+
+        private void OnEnable()
+        {
+            Invoke(nameof(TryShowAttentionPopup), 1f);
+        }
+
+        private void OnDisable()
+        {
+            CancelInvoke();
+        }
+
         private void OnPlay()
         {
             _garageManager.ShowPage(GaragePages.LoadingScreen);
@@ -40,6 +51,11 @@ namespace ui
         private void OnSettings()
         {
             _garageManager.ShowPage(GaragePages.SettingsMenu);
+        }
+
+        private void TryShowAttentionPopup()
+        {
+            _attentionPopup.Show();
         }
     }
 }

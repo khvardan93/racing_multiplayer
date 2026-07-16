@@ -871,10 +871,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 661011141942141814, guid: 9e2cf6091b42d13469cdd5597164b23f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2038424021794178911, guid: 9e2cf6091b42d13469cdd5597164b23f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
