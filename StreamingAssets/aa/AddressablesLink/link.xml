@@ -46,6 +46,7 @@
     <type fullname="RacerCar.UI.FpsCounter" preserve="all" />
     <type fullname="UI.RivalCamView" preserve="all" />
     <type fullname="UI.TouchControlsVisibility" preserve="all" />
+    <type fullname="UI.UIBaseItem" preserve="all" />
     <type fullname="UI.UIColorTabItem" preserve="all" />
     <type fullname="UI.UIControlSchemeTab" preserve="all" />
     <type fullname="UI.UIFallingAnimator" preserve="all" />
