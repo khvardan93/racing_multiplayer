@@ -1,5 +1,38 @@
 <linker>
-  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+  <assembly fullname="Fusion.Addons.Physics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Fusion.Addons.Physics.NetworkRigidbody3D" preserve="all" />
+    <type fullname="Fusion.Addons.Physics.RunnerSimulatePhysics3D" preserve="all" />
+    <type fullname="Fusion.Addons.Physics.TRSThresholds" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Fusion.Runtime, Version=2.0.12.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Fusion.NetworkEvents" preserve="all" />
+    <type fullname="Fusion.NetworkObject" preserve="all" />
+    <type fullname="Fusion.NetworkObjectPrefabData" preserve="all" />
+    <type fullname="Fusion.NetworkRunner" preserve="all" />
+    <type fullname="Fusion.NetworkEvents/ConnectFailedEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/ConnectRequestEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/CustomAuthenticationResponse" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/DisconnectFromServerEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/HostMigrationEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/InputEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/InputPlayerEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/ObjectPlayerEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/PlayerEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/ReliableDataEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/ReliableProgressEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/RunnerEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/SessionListUpdateEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/ShutdownEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkEvents/SimulationMessageEvent" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkObjectGuid" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Fusion.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Fusion.EnableOnSingleRunner" preserve="all" />
+    <type fullname="Fusion.NetworkObjectProviderDefault" preserve="all" />
+    <type fullname="Fusion.RunnerEnableVisibility" preserve="all" />
+    <type fullname="Fusion.Statistics.FusionStatistics" preserve="all" />
+  </assembly>
+  <assembly fullname="Racer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="CarControl" preserve="all" />
     <type fullname="GameplayInstaller" preserve="all" />
     <type fullname="GarageInstaller" preserve="all" />
@@ -52,39 +85,6 @@
     <type fullname="Managers.GarageManager/Page" preserve="nothing" serialized="true" />
     <type fullname="UI.UISettingsMenu/Tab" preserve="nothing" serialized="true" />
     <type fullname="UI.UISwitch/SwitchState" preserve="nothing" serialized="true" />
-  </assembly>
-  <assembly fullname="Fusion.Addons.Physics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="Fusion.Addons.Physics.NetworkRigidbody3D" preserve="all" />
-    <type fullname="Fusion.Addons.Physics.RunnerSimulatePhysics3D" preserve="all" />
-    <type fullname="Fusion.Addons.Physics.TRSThresholds" preserve="nothing" serialized="true" />
-  </assembly>
-  <assembly fullname="Fusion.Runtime, Version=2.0.12.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="Fusion.NetworkEvents" preserve="all" />
-    <type fullname="Fusion.NetworkObject" preserve="all" />
-    <type fullname="Fusion.NetworkObjectPrefabData" preserve="all" />
-    <type fullname="Fusion.NetworkRunner" preserve="all" />
-    <type fullname="Fusion.NetworkEvents/ConnectFailedEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/ConnectRequestEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/CustomAuthenticationResponse" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/DisconnectFromServerEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/HostMigrationEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/InputEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/InputPlayerEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/ObjectPlayerEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/PlayerEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/ReliableDataEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/ReliableProgressEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/RunnerEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/SessionListUpdateEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/ShutdownEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkEvents/SimulationMessageEvent" preserve="nothing" serialized="true" />
-    <type fullname="Fusion.NetworkObjectGuid" preserve="nothing" serialized="true" />
-  </assembly>
-  <assembly fullname="Fusion.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="Fusion.EnableOnSingleRunner" preserve="all" />
-    <type fullname="Fusion.NetworkObjectProviderDefault" preserve="all" />
-    <type fullname="Fusion.RunnerEnableVisibility" preserve="all" />
-    <type fullname="Fusion.Statistics.FusionStatistics" preserve="all" />
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
