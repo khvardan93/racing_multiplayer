@@ -28,34 +28,24 @@ public class CarControlPhysicsTests
         _rigidbody.linearDamping = 0.05f;
         _rigidbody.angularDamping = 0.05f;
 
-        // Add WheelColliders (required for CarControl)
-        var frontLeftWheel = _carObject.AddComponent<WheelCollider>();
-        frontLeftWheel.suspensionDistance = 0.3f;
-        frontLeftWheel.mass = 20;
-
-        var frontRightWheel = _carObject.AddComponent<WheelCollider>();
-        frontRightWheel.suspensionDistance = 0.3f;
-        frontRightWheel.mass = 20;
-
-        var rearLeftWheel = _carObject.AddComponent<WheelCollider>();
-        rearLeftWheel.suspensionDistance = 0.3f;
-        rearLeftWheel.mass = 20;
-
-        var rearRightWheel = _carObject.AddComponent<WheelCollider>();
-        rearRightWheel.suspensionDistance = 0.3f;
-        rearRightWheel.mass = 20;
+        // Add WheelColliders (required for CarControl). Each wheel needs its own
+        // GameObject - a WheelCollider can't be added more than once per object.
+        var frontLeftWheel = CreateWheelCollider("FrontLeft");
+        var frontRightWheel = CreateWheelCollider("FrontRight");
+        var rearLeftWheel = CreateWheelCollider("RearLeft");
+        var rearRightWheel = CreateWheelCollider("RearRight");
 
         // Add WheelControl components to wheels
-        var flWheelControl = _carObject.AddComponent<WheelControl>();
+        var flWheelControl = frontLeftWheel.gameObject.AddComponent<WheelControl>();
         SetWheelControlProperties(flWheelControl, frontLeftWheel, true, false);
 
-        var frWheelControl = _carObject.AddComponent<WheelControl>();
+        var frWheelControl = frontRightWheel.gameObject.AddComponent<WheelControl>();
         SetWheelControlProperties(frWheelControl, frontRightWheel, true, false);
 
-        var rlWheelControl = _carObject.AddComponent<WheelControl>();
+        var rlWheelControl = rearLeftWheel.gameObject.AddComponent<WheelControl>();
         SetWheelControlProperties(rlWheelControl, rearLeftWheel, false, true);
 
-        var rrWheelControl = _carObject.AddComponent<WheelControl>();
+        var rrWheelControl = rearRightWheel.gameObject.AddComponent<WheelControl>();
         SetWheelControlProperties(rrWheelControl, rearRightWheel, false, true);
 
         // Add CarControl
@@ -75,11 +65,30 @@ public class CarControlPhysicsTests
         wheelsField.SetValue(_carControl, new[] { flWheelControl, frWheelControl, rlWheelControl, rrWheelControl });
     }
 
+    private WheelCollider CreateWheelCollider(string name)
+    {
+        var wheelObject = new GameObject(name);
+        wheelObject.transform.SetParent(_carObject.transform);
+
+        var collider = wheelObject.AddComponent<WheelCollider>();
+        collider.suspensionDistance = 0.3f;
+        collider.mass = 20;
+        return collider;
+    }
+
     private void SetWheelControlProperties(WheelControl wheelControl, WheelCollider collider, bool steerable, bool motorized)
     {
         var colliderField = typeof(WheelControl).GetField("_wheelCollider",
             System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
         colliderField.SetValue(wheelControl, collider);
+
+        // WheelControl.Update() dereferences _wheelModel every frame; give it a
+        // dummy visual transform so it doesn't NullReferenceException during the test.
+        var wheelModelField = typeof(WheelControl).GetField("_wheelModel",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        var visualObject = new GameObject(collider.name + "_Visual");
+        visualObject.transform.SetParent(collider.transform);
+        wheelModelField.SetValue(wheelControl, visualObject.transform);
 
         var steerableField = typeof(WheelControl).GetField("_steerable",
             System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);

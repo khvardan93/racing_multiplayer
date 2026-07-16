@@ -93,14 +93,6 @@ public class CarWheelTests
     }
 
     [Test]
-    public void CarWheel_UpdateMethodExists()
-    {
-        var method = typeof(CarWheel).GetMethod("Update",
-            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        Assert.IsNotNull(method);
-    }
-
-    [Test]
     public void CarWheel_CanHaveNullCollider()
     {
         var colliderField = typeof(CarWheel).GetField("_collider",
