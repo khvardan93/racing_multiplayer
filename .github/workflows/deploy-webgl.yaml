@@ -16,8 +16,6 @@ jobs:
       # 1. Checkout the repository code
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          lfs: true # Ensures Large File Storage assets are pulled correctly
 
       # 2. Cache Unity Library folder to speed up future builds
       - name: Cache Library
